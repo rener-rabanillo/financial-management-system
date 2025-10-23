@@ -1,0 +1,92 @@
+/* About us section */
+
+#about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    padding-top: 50px;
+}
+
+#about-us img, #company-description img {
+    width: 50%;
+}
+
+.about-us-wrapper, .company-description-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5rem;
+}
+
+.about-us-wrapper h2, .company-description-wrapper h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-us-wrapper p, .company-description-wrapper p {
+    font-weight: 400;
+    font-size: 1rem;
+    text-wrap: balance;
+    margin-bottom: 1rem;
+}
+
+/* Company description section */
+
+#company-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Contributors section */
+
+#contributors {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 5rem 0;
+}
+
+#contributors h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+#contributors ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#contributors li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+#contributors img {
+    height: 250px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.contributor-name {
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+}
+
+.contributor-role {
+    font-weight: 300;
+    font-size: 0.75rem;
+    color: white;
+}

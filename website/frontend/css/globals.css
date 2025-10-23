@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "Proxima Nova";
+    src: url(/shared/assets/fonts/proxima-nova-lt.otf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url(/shared/assets/fonts/proxima-nova-lt-it.otf);
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url(/shared/assets/fonts/proxima-nova-rg.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url(/shared/assets/fonts/proxima-nova-bold.otf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url(/shared/assets/fonts/proxima-nova-bold-it.otf);
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url(/shared/assets/fonts/proxima-nova-black.ttf);
+    font-weight: 900;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Proxima Nova", sans-serif;
+    font-weight: 400;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+ol, ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+input, button, textarea, select {
+    font: inherit;
+    font-size: inherit;
+}
+
+:root {
+    --primary-color: #85BF46;
+    --secondary-color: #245484;
+}

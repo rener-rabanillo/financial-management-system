@@ -1,0 +1,117 @@
+.brand-logo {
+    width: 100px;
+}
+
+
+/* Header section */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px 1px rgb(150, 150, 150);
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav, .cta {
+    margin: 1rem;
+}
+
+nav ul, .cta ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-link {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.cta-link {
+    padding: 1rem 2rem;
+}
+
+.login-link {
+    margin-right: 0.5rem;
+}
+
+.signup-link {
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    margin-left: 0.5rem;
+}
+
+
+/* Footer section */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.footer-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 2rem;
+}
+
+.contact-info, .social-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact-info li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+
+.social-media ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contact-info-icon {
+    width: 25px;
+    fill: white;
+    margin-right: 1rem;
+}
+
+.social-media-icon {
+    width: 50px;
+    fill: white;
+    margin-right: 1rem;
+}
+
+.contact-info h2, .social-media h2 {
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.contact-info-detail {
+    color: white;
+}
+
+.copyright-text {
+    font-weight: 300;
+    font-size: 0.75rem;
+    color: white;
+}

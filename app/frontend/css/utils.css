@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 1rem 1rem;
+}
+
+header .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-icon {
+    width: 40px;
+    margin: 1rem 1rem 1rem 0;
+}
+
+body .wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-icon {
+    width: 20px;
+}
