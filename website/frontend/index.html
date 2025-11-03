@@ -10,12 +10,10 @@
 <body>
 
 	<header>
-		<div class="header-wrapper">
-			<div>
-				<a href="index.html">
-					<img src="/shared/assets/images/budget-buddy-logo.png" alt="Budget Buddy Logo" class="brand-logo">
-				</a>
-			</div>
+		<div class="wrapper">
+			<a href="index.html">
+				<img src="/shared/assets/images/budget-buddy-logo.png" alt="Budget Buddy Logo" class="brand-logo">
+			</a>
 			<nav>
 				<ul>
 					<li>
@@ -24,15 +22,22 @@
 					<li>
 						<a href="about.html" class="nav-link">About us</a>
 					</li>
+					<li>
+						<a href="contact.html" class="nav-link">Contact</a>
+					</li>
 				</ul>
 			</nav>
 			<div class="cta">
 				<ul>
 					<li>
-						<a href="login.html" class="cta-link login-link">Log in</a>
+						<a href="login.html">
+							<button class="btn btn-default">Log in</button>
+						</a>
 					</li>
 					<li>
-						<a href="signup.html" class="cta-link signup-link">Sign up for free</a>
+						<a href="signup.html">
+							<button class="btn btn-primary">Sign up for free</button>
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -40,13 +45,21 @@
 	</header>
 
 	<main>
+
 		<!-- Introductory section to advertise Budget Buddy to users -->
 
 		<section id="hero">
-			<div>
-				<h1>Save more, worry less.</h1>
+			<div class="wrapper">
+				<h1>Save more, worry less</h1>
 				<h3>Looking for a way to manage your expenses?<br>Track, save, and reach your goals all in one app.</h3>
-				<a href="signup.html" class="cta-link signup-link">Get started</a>
+				<div class="hero-buttons">
+					<a href="#app-description">
+						<button class="btn btn-secondary-outline">Learn more</button>
+					</a>
+					<a href="signup.html">
+						<button class="btn btn-primary-gradient">Get started</button>
+					</a>
+				</div>
 			</div>
 			<img src="assets/images/hero-section-image.jpg" alt="Background Image">
 		</section>
@@ -54,44 +67,65 @@
 		<!-- Overview of Budget Buddy -->
 
 		<section id="app-description">
-			<img src="assets/images/app-description-image.png" alt="Background Image">
-			<div class="app-description-wrapper">
-				<h2>What is Budget Buddy?</h2>
-				<p>
-					Budget Buddy is an analytics-based budgeting application that helps you understand, manage, and optimize your spending habits.
-					Developed to make financial planning simple and worry-free, it enables users to make smarter financial decisions, anytime, anywhere.
-				</p>
+			<div class="container">
+				<div class="frame">
+					<img src="assets/images/app-description-image.png" alt="Background Image">
+				</div>
+				<div class="wrapper">
+					<h2>What is Budget Buddy?</h2>
+					<p>Budget Buddy is an analytics-based budgeting application that helps you understand, manage, and optimize your spending habits.</p>
+					<p>Developed to make financial planning simple and worry-free, it enables users to make smarter financial decisions, anytime, anywhere.</p>
+				</div>
 			</div>
 		</section>
 
 		<!-- Benefits of Budget Buddy -->
 
 		<section id="app-benefits">
-			<h2>What it offers...</h2>
-			<ul>
-				<li>
-					<img src="assets/images/benefit-1-image.png" alt="">
-					<p>Promotes financial literacy and smarter budgeting habits.</p>
-				</li>
-				<li>
-					<img src="assets/images/benefit-2-image.png" alt="">
-					<p>Provides users with an easy and intuitive way to track income and expenses.</p>
-				</li>
-				<li>
-					<img src="assets/images/benefit-3-image.png" alt="">
-					<p>Simplifies financial decision-making through insights and analytics.</p>
-				</li>
-			</ul>
+			<h2>Benefits</h2>
+			<div class="wrapper">
+				<figure class="card">
+					<div class="card-image-frame">
+						<img src="assets/images/benefit-1-image.png" alt="" class="card-image">
+					</div>
+					<figcaption class="card-caption">Promotes financial literacy and smarter budgeting habits.</figcaption>
+				</figure>
+				<figure class="card">
+					<div class="card-image-frame">
+						<img src="assets/images/benefit-2-image.png" alt="" class="card-image">
+					</div>
+					<figcaption class="card-caption">Provides users with an easy and intuitive way to track income and expenses.</figcaption>
+				</figure>
+				<figure class="card">
+					<div class="card-image-frame">
+						<img src="assets/images/benefit-3-image.png" alt="" class="card-image">
+					</div>
+					<figcaption class="card-caption">Simplifies financial decision-making through insights and analytics.</figcaption>
+				</figure>
+			</div>
 		</section>
+
+		<section id="newsletter">
+			<div class="wrapper">
+				<h2>Join our community</h2>
+				<p>Don&apos;t miss out on updates. Subscribe to our newletter!</p>
+				<form action="" method="POST">
+					<div class="input-wrapper">
+						<input type="email" id="email" placeholder="" required>
+						<label for="email">Email</label>
+						<button type="submit" class="btn btn-tertiary">Subscribe</button>
+					</div>
+				</form>
+			</div>
+		</section>
+		
 	</main>
 
 	<footer>
-		<div class="footer-item">
-			<div>
-				<a href="index.html">
-					<img src="/shared/assets/images/budget-buddy-logo.png" alt="Budget Buddy Logo" class="brand-logo">
-				</a>
-			</div>
+		<div class="wrapper">
+			<a href="index.html">
+				<img src="/shared/assets/images/budget-buddy-logo.png" alt="Budget Buddy Logo" class="brand-logo">
+			</a>
 			<div class="contact-info">
 				<h2>Contact Us</h2>
 				<ul>
@@ -141,7 +175,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="footer-item">
+		<div class="wrapper">
 			<small class="copyright-text">&copy; 2025 SquadCore. All rights reserved.</small>
 		</div>
 	</footer>

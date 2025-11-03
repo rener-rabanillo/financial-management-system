@@ -1,70 +1,173 @@
-@font-face {
-    font-family: "Proxima Nova";
-    src: url(/shared/assets/fonts/proxima-nova-lt.otf);
-    font-weight: 300;
-    font-style: normal;
+/* Header section */
+
+.brand-logo {
+    width: 80px;
+    margin: 0.5rem;
 }
 
-@font-face {
-    font-family: "Proxima Nova";
-    src: url(/shared/assets/fonts/proxima-nova-lt-it.otf);
-    font-weight: 300;
-    font-style: italic;
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: white;
 }
 
-@font-face {
-    font-family: "Proxima Nova";
-    src: url(/shared/assets/fonts/proxima-nova-rg.ttf);
-    font-weight: 400;
-    font-style: normal;
+header .wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1rem;
 }
 
-@font-face {
-    font-family: "Proxima Nova";
-    src: url(/shared/assets/fonts/proxima-nova-bold.otf);
+nav ul, .cta ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav li, .cta li {
+    margin: 0 0.5rem;
+}
+
+.nav-link {
+    display: block;
+    position: relative;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8%;
+    background-color: #245484;
+    transform: translateX(-102%);
+    transition: all 0.5s;
+}
+
+.nav-link:hover::before {
+    transform: translateX(0);
+}
+
+
+
+/* Newsletter section*/
+
+#newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    color: #ffffff;
+    background-color: var(--color-primary);
+}
+
+#newsletter .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#newsletter h2 {
     font-weight: 700;
-    font-style: normal;
+    font-size: 1.5rem;
+    text-align: left;
+    text-transform: capitalize;
+    color: #ffffff;
+    margin-bottom: 1rem;
 }
 
-@font-face {
-    font-family: "Proxima Nova";
-    src: url(/shared/assets/fonts/proxima-nova-bold-it.otf);
-    font-weight: 700;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Proxima Nova";
-    src: url(/shared/assets/fonts/proxima-nova-black.ttf);
-    font-weight: 900;
-    font-style: normal;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Proxima Nova", sans-serif;
+#newsletter p {
     font-weight: 400;
-    font-size: 100%;
-    line-height: 1.5;
+    font-size: 1rem;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 1rem;
 }
 
-ol, ul {
-    list-style-type: none;
+#newsletter .input-wrapper > * {
+    margin-right: 0.25rem;
 }
 
-a {
-    text-decoration: none;
-    color: black;
+#newsletter input[type="email"] {
+    box-shadow: 0 0 0 2px #ffffff inset;
+    color: #ffffff;
 }
 
-input, button, textarea, select {
-    font: inherit;
-    font-size: inherit;
+#newsletter label {
+    color: #ffffff;
+    background-color: var(--color-primary);
 }
 
-:root {
-    --primary-color: #85BF46;
-    --secondary-color: #245484;
+
+
+/* Footer section */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+footer .wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+.contact-info, .social-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact-info h2, .social-media h2 {
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.contact-info li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.social-media ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contact-info-icon {
+    width: 25px;
+    fill: white;
+    margin-right: 0.5rem;
+}
+
+.contact-info-detail {
+    color: white;
+}
+
+.social-media-icon {
+    width: 50px;
+    fill: white;
+    margin-right: 0.5rem;
+}
+
+.copyright-text {
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: white;
 }
