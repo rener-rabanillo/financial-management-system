@@ -1,40 +1,63 @@
+@import url(/shared/css/globals.css);
+@import url(/shared/css/variables.css);
+
 /* Hero section */
 
 #hero {
+    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 90vh;
-    margin-top: 100px;
+    height: 35rem;
+    overflow: hidden;
 }
 
-#hero div {
+#hero .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-right: 2rem;
+    align-items: flex-start;
+    margin: 8rem;
 }
 
 #hero h1 {
+    font-family: "Montserrat", "Inter", sans-serif;
     font-weight: 900;
-    font-size: 2.5rem;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    line-height: 1.2;
+    text-align: left;
+    text-transform: capitalize;
+    text-wrap: balance;
+    margin-bottom: 1rem;
 }
 
 #hero h3 {
     font-weight: 400;
     font-size: 1.25rem;
-    text-align: center;
-    margin-bottom: 1rem;
+    text-align: left;
+    text-wrap: balance;
+    margin-bottom: 1.5rem;
+}
+
+#hero .hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero .hero-buttons a {
+    margin-right: 1rem;
 }
 
 #hero img {
-    height: 100%;
-    margin-left: 2rem;
+    position: absolute;
+    bottom: -35rem;
+    right: -5rem;
+    z-index: -10;
+    height: 80rem;
 }
+
+
 
 /* Description section */
 
@@ -42,35 +65,57 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
-    background-color: rgb(235, 235, 235);
+}
+
+#app-description .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 35rem;
+    background-color: var(--color-primary);
+    border-radius: 20px;
+}
+
+#app-description .frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
 }
 
 #app-description img {
-    width: 30%;
+    height: 30rem;
 }
 
-#app-description-wrapper {
+#app-description .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    width: 50%;
+    padding: 3rem;
 }
 
 #app-description h2 {
     font-weight: 700;
     font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 0.5rem;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 1rem;
 }
 
 #app-description p {
     font-weight: 400;
     font-size: 1rem;
-    text-align: center;
+    text-align: left;
     text-wrap: balance;
-    width: 40vw;
+    color: #ffffff;
+    margin-bottom: 1rem;
 }
+
+
 
 /* Benefits section */
 
@@ -79,38 +124,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    padding: 5rem;
 }
 
 #app-benefits h2 {
     font-weight: 700;
     font-size: 1.5rem;
     text-align: center;
-    margin-bottom: 0.5rem;
+    padding: 1rem;
 }
 
-#app-benefits ul {
+#app-benefits .wrapper {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-#app-benefits li {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 33vw;
-}
-
-#app-benefits img {
-    height: 300px;
-    margin-bottom: 2rem;
-}
-
-#app-benefits p {
-    text-align: center;
-    text-wrap: balance;
-    font-weight: 400;
-    font-size: 1rem;
 }

@@ -4,8 +4,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 100px;
-    padding-top: 50px;
 }
 
 #about-us img, #company-description img {
@@ -48,7 +46,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--secondary-color);
+    background-color: var(--color-secondary);
     padding: 5rem 0;
 }
 

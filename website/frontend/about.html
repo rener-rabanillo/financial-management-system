@@ -10,12 +10,10 @@
 <body>
 
 	<header>
-		<div class="header-wrapper">
-			<div>
-				<a href="index.html">
-					<img src="/shared/assets/images/budget-buddy-logo.png" alt="Budget Buddy Logo" class="brand-logo">
-				</a>
-			</div>
+		<div class="wrapper">
+			<a href="index.html">
+				<img src="/shared/assets/images/budget-buddy-logo.png" alt="Budget Buddy Logo" class="brand-logo">
+			</a>
 			<nav>
 				<ul>
 					<li>
@@ -24,15 +22,22 @@
 					<li>
 						<a href="about.html" class="nav-link">About us</a>
 					</li>
+					<li>
+						<a href="contact.html" class="nav-link">Contact</a>
+					</li>
 				</ul>
 			</nav>
 			<div class="cta">
 				<ul>
 					<li>
-						<a href="login.html" class="cta-link login-link">Log in</a>
+						<a href="login.html">
+							<button class="btn btn-default">Log in</button>
+						</a>
 					</li>
 					<li>
-						<a href="signup.html" class="cta-link signup-link">Sign up for free</a>
+						<a href="signup.html">
+							<button class="btn btn-primary">Sign up for free</button>
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -40,6 +45,7 @@
 	</header>
 
 	<main>
+
         <section id="about-us">
 			<img src="assets/images/team-vector-image.jpg" alt="Team Vector Image">
 			<div class="about-us-wrapper">
@@ -54,6 +60,7 @@
 				</p>
 			</div>
         </section>
+
         <section id="company-description">
 			<div class="company-description-wrapper">
 				<h2>Company Description</h2>
@@ -75,6 +82,7 @@
 			</div>
 			<img src="assets/images/company-vector-image.jpg" alt="Company Vector Image">
         </section>
+
         <section id="contributors">
             <h2>Contributors</h2>
             <ul>
@@ -100,15 +108,28 @@
                 </li>
             </ul>
         </section>
+
+		<section id="newsletter">
+			<div class="wrapper">
+				<h2>Join our community</h2>
+				<p>Don&apos;t miss out on updates. Subscribe to our newletter!</p>
+				<form action="" method="POST">
+					<div class="input-wrapper">
+						<input type="email" id="email" placeholder="" required>
+						<label for="email">Email</label>
+						<button type="submit" class="btn btn-tertiary">Subscribe</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
 	</main>
 
 	<footer>
-		<div class="footer-item">
-			<div>
-				<a href="index.html">
-					<img src="/shared/assets/images/budget-buddy-logo.png" alt="Budget Buddy Logo" class="brand-logo">
-				</a>
-			</div>
+		<div class="wrapper">
+			<a href="index.html">
+				<img src="/shared/assets/images/budget-buddy-logo.png" alt="Budget Buddy Logo" class="brand-logo">
+			</a>
 			<div class="contact-info">
 				<h2>Contact Us</h2>
 				<ul>
@@ -158,7 +179,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="footer-item">
+		<div class="wrapper">
 			<small class="copyright-text">&copy; 2025 SquadCore. All rights reserved.</small>
 		</div>
 	</footer>

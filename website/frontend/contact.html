@@ -3,10 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Log In | Budget Buddy</title>
+	<title>Sign Up | Budget Buddy</title>
 	<link rel="icon" type="image/x-icon" href="/shared/assets/icons/favicon.ico">
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/pages/login.css">
 </head>
 <body>
 
@@ -15,25 +14,52 @@
 			<a href="index.html">
 				<img src="/shared/assets/images/budget-buddy-logo.png" alt="Budget Buddy Logo" class="brand-logo">
 			</a>
+			<nav>
+				<ul>
+					<li>
+						<a href="index.html" class="nav-link">Home</a>
+					</li>
+					<li>
+						<a href="about.html" class="nav-link">About us</a>
+					</li>
+					<li>
+						<a href="contact.html" class="nav-link">Contact</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="cta">
+				<ul>
+					<li>
+						<a href="login.html">
+							<button class="btn btn-default">Log in</button>
+						</a>
+					</li>
+					<li>
+						<a href="signup.html">
+							<button class="btn btn-primary">Sign up for free</button>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</header>
 
 	<main>
-        <div class="login-container">
-            <h2 class="form-title">Log in</h2>
-            <form action="" method="POST">
-                <div class="input-wrapper">
-                    <input type="email" id="email" placeholder="" required>
-                    <label for="email">Email</label>
-                </div>
-                <div class="input-wrapper">
-                    <input type="password" id="password" placeholder="" required>
-                    <label for="password">Password</label>
-                </div>
-                <button type="submit">Log in</button>
-                <p class="register-link">Don&apos;t have an account?&nbsp;<a href="signup.html">Sign up</a></p>
-            </form>
-        </div>
+
+		<section id="newsletter">
+			<div class="wrapper">
+				<h2>Join our community</h2>
+				<p>Don&apos;t miss out on updates. Subscribe to our newletter!</p>
+				<form action="" method="POST">
+					<div class="input-wrapper">
+						<input type="email" id="email" placeholder="" required>
+						<label for="email">Email</label>
+						<button type="submit" class="btn btn-tertiary">Subscribe</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
 	</main>
 
 	<footer>
@@ -94,6 +120,6 @@
 			<small class="copyright-text">&copy; 2025 SquadCore. All rights reserved.</small>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

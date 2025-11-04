@@ -1,117 +1,217 @@
-.brand-logo {
-    width: 100px;
+@import url(/shared/css/variables.css);
+
+
+
+/* Buttons */
+
+.btn {
+    cursor: pointer;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.btn-default:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.btn-default:focus {
+    color: #ffffff;
+    background-color: rgb(150, 150, 150);
 }
 
 
-/* Header section */
+/* Primary button */
 
-header {
-    position: fixed;
+.btn-primary {
+    color: #ffffff;
+    background-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: #153c63;
+}
+
+.btn-primary:focus {
+    background-color: #0b233a;
+}
+
+
+/* Primary button with gradient */
+
+.btn-primary-gradient {
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+
+.btn-primary-gradient::before {
+    content: "";
+    position: absolute;
     top: 0;
+    left: 0;
+    z-index: -1;
+    width: 200%;
+    height: 100%;
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-primary));
+    transform: translateX(-50%);
+    transition: all 0.5s;
+}
+
+.btn-primary-gradient:hover::before {
+    transform: translateX(0);
+}
+
+
+/* Primary outline button*/
+
+.btn-primary-outline {
+    position: relative;
+    color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary) inset;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.btn-primary-outline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
     width: 100%;
-    background-color: white;
-    box-shadow: 0 0 10px 1px rgb(150, 150, 150);
+    height: 100%;
+    background-color: var(--color-primary);
+    transform: translateX(-100%);
+    transition: all 0.5s;
 }
 
-.header-wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.btn-primary-outline:hover {
+    color: #ffffff;
 }
 
-nav, .cta {
-    margin: 1rem;
+.btn-primary-outline:hover::before {
+    transform: translateX(0);
 }
 
-nav ul, .cta ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+
+/* Secondary outline button*/
+
+.btn-secondary-outline {
+    position: relative;
+    color: var(--color-secondary);
+    box-shadow: 0 0 0 2px var(--color-secondary) inset;
+    overflow: hidden;
+    transition: all 0.5s;
 }
 
-.nav-link {
-    margin: 1rem;
-    padding: 1rem;
+.btn-secondary-outline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #92eddb, var(--color-secondary));
+    transform: translateX(-100%);
+    transition: all 0.5s;
 }
 
-.cta-link {
-    padding: 1rem 2rem;
+.btn-secondary-outline:hover {
+    box-shadow: none;
+    color: #ffffff;
 }
 
-.login-link {
-    margin-right: 0.5rem;
+.btn-secondary-outline:hover::before {
+    transform: translateX(0);
 }
 
-.signup-link {
-    color: white;
-    background-color: var(--primary-color);
+
+/* Tertiary button */
+
+.btn-tertiary {
+    color: #ffffff;
+    background-color: var(--color-tertiary);
+}
+
+.btn-tertiary:hover {
+    background-color: #5e9424;
+}
+
+.btn-tertiary:focus {
+    background-color: #3c6411;
+}
+
+
+
+/* Cards */
+
+.card {
+    width: 20rem;
+    height: 30rem;
     border-radius: 10px;
-    margin-left: 0.5rem;
+    box-shadow: 0 0 20px rgb(200, 200, 200);
+    margin: 1rem;
+    overflow: hidden;
 }
 
-
-/* Footer section */
-
-footer {
+.card-image-frame {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-color: black;
+    height: 20rem;
+    overflow: hidden;
 }
 
-.footer-item {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    margin: 2rem;
+.card-image {
+    height: 22rem;
+    background-color: var(--color-secondary);
+    transition: all 0.5s;
 }
 
-.contact-info, .social-media {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+.card-image:hover {
+    transform: scale(1.2);
 }
 
-.contact-info li {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 0.25rem;
+.card-caption {
+    padding: 2rem;
 }
 
-.social-media ul {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+
+
+/* Textbox */
+
+.input-wrapper {
+    position: relative;
 }
 
-.contact-info-icon {
-    width: 25px;
-    fill: white;
-    margin-right: 1rem;
+.input-wrapper input[type="text"],
+.input-wrapper input[type="email"],
+.input-wrapper input[type="password"] {
+    outline: none;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 0 0 2px rgb(200, 200, 200) inset;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
 }
 
-.social-media-icon {
-    width: 50px;
-    fill: white;
-    margin-right: 1rem;
+.input-wrapper label {
+    position: absolute;
+    top: calc(0.75rem + 1px);
+    left: calc(1rem + 1px);
+    z-index: 10;
+    color: rgb(100, 100, 100);
+    pointer-events: none;
+    transition: all 0.5s;
 }
 
-.contact-info h2, .social-media h2 {
-    font-weight: 700;
-    color: white;
-    margin-bottom: 1rem;
-}
-
-.contact-info-detail {
-    color: white;
-}
-
-.copyright-text {
-    font-weight: 300;
-    font-size: 0.75rem;
-    color: white;
+.input-wrapper :is(input[type="text"]:focus, input[type="text"]:not(:placeholder-shown))~label,
+.input-wrapper :is(input[type="email"]:focus, input[type="email"]:not(:placeholder-shown))~label,
+.input-wrapper :is(input[type="password"]:focus, input[type="password"]:not(:placeholder-shown))~label {
+    transform: translateY(-100%) scale(0.8);
+    color: #000000;
+    background-color: #ffffff;
+    padding: 0 0.5rem;
 }

@@ -1,0 +1,145 @@
+/* Inter Typeface */
+
+@font-face {
+    font-family: "Inter";
+    src: url(/shared/assets/fonts/inter-thin.ttf);
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(/shared/assets/fonts/inter-thin-italic.ttf);
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(/shared/assets/fonts/inter-regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(/shared/assets/fonts/inter-regular-italic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(/shared/assets/fonts/inter-bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(/shared/assets/fonts/inter-bold-italic.ttf);
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(/shared/assets/fonts/inter-black.ttf);
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(/shared/assets/fonts/inter-black-italic.ttf);
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+
+/* Montserrat Typeface */
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(/shared/assets/fonts/montserrat-thin.ttf);
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(/shared/assets/fonts/montserrat-thin-italic.ttf);
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(/shared/assets/fonts/montserrat-regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(/shared/assets/fonts/montserrat-regular-italic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(/shared/assets/fonts/montserrat-bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(/shared/assets/fonts/montserrat-bold-italic.ttf);
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(/shared/assets/fonts/montserrat-black.ttf);
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(/shared/assets/fonts/montserrat-black-italic.ttf);
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+ol, ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+input, button, textarea, select {
+    font: inherit;
+    font-size: inherit;
+}
