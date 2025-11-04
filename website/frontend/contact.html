@@ -6,6 +6,7 @@
 	<title>Sign Up | Budget Buddy</title>
 	<link rel="icon" type="image/x-icon" href="/shared/assets/icons/favicon.ico">
 	<link rel="stylesheet" href="css/main.css">
+	<link  rel="stylesheet" href="css/pages/contact.css">
 </head>
 <body>
 
@@ -46,21 +47,70 @@
 
 	<main>
 
-		<section id="newsletter">
-			<div class="wrapper">
-				<h2>Join our community</h2>
-				<p>Don&apos;t miss out on updates. Subscribe to our newletter!</p>
-				<form action="" method="POST">
-					<div class="input-wrapper">
-						<input type="email" id="email" placeholder="" required>
-						<label for="email">Email</label>
-						<button type="submit" class="btn btn-tertiary">Subscribe</button>
+	<!-- CONTACT SECTION -->
+	<section id="contact-us">
+		<div class="wrapper contact-wrapper">
+			<div class="contact-info-box">
+				<h2>Contact Our Team</h2>
+				<p>Need help managing your finances or have feedback about Budget Buddy?  
+				Our support team is always ready to assist you with any questions, issues, or suggestions.</p>
+
+				<ul class="contact-details">
+					<li><strong>📞 Phone:</strong> 09223144544</li>
+					<li><strong>📧 Email:</strong> squadcore@gmail.com</li>
+				</ul>
+
+				<div class="tips">
+					<h3>💡 Quick Tip:</h3>
+					<p>Check out your <strong>Budget Summary</strong> or <strong>Expense Insights</strong> pages first —  
+					your question might already be answered there!</p>
+				</div>
+			</div>
+
+			<div class="contact-form-box">
+				<h2>Send Us a Message</h2>
+				<form action="#" method="POST">
+					<div class="form-group">
+						<label for="name">Full Name</label>
+						<input type="text" id="name" name="name" placeholder="Enter your full name" required>
 					</div>
+
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" placeholder="Enter your email" required>
+					</div>
+
+					<div class="form-group">
+						<label for="subject">Subject</label>
+						<input type="text" id="subject" name="subject" placeholder="Ex: App feedback or account issue" required>
+					</div>
+
+					<div class="form-group">
+						<label for="message">Message</label>
+						<textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+					</div>
+
+					<button type="submit" class="btn btn-primary">Submit Message</button>
 				</form>
 			</div>
-		</section>
+		</div>
+	</section>
 
-	</main>
+	
+	<section id="newsletter">
+		<div class="wrapper">
+			<h2>Join our community</h2>
+			<p>Don&apos;t miss out on updates. Subscribe to our newletter!</p>
+			<form action="" method="POST">
+				<div class="input-wrapper">
+					<input type="email" id="email" placeholder="" required>
+					<label for="email">Email</label>
+					<button type="submit" class="btn btn-tertiary">Subscribe</button>
+				</div>
+			</form>
+		</div>
+	</section>
+</main>
 
 	<footer>
 		<div class="wrapper">
