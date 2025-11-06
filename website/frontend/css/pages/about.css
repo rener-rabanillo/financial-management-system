@@ -46,14 +46,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-secondary);
+    background-color: var(--color-quaternary);
     padding: 5rem 0;
 }
 
 #contributors h2 {
     font-weight: 700;
     font-size: 1.5rem;
-    color: white;
+    color: black;
     margin-bottom: 1rem;
 }
 
@@ -78,13 +78,13 @@
 }
 
 .contributor-name {
-    font-weight: 400;
+    font-weight: 700;
     font-size: 1rem;
-    color: white;
+    color: black;
 }
 
 .contributor-role {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 0.75rem;
-    color: white;
+    color: black;
 }

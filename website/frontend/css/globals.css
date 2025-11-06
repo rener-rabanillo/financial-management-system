@@ -61,7 +61,7 @@ nav li, .cta li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20rem;
+    padding: 5rem;
     color: #ffffff;
     background-color: var(--color-primary);
 }
@@ -90,11 +90,17 @@ nav li, .cta li {
     margin-bottom: 1rem;
 }
 
+#newsletter form, #newsletter .input-wrapper {
+    width: 100%;
+}
+
 #newsletter .input-wrapper > * {
+    width: auto;
     margin-right: 0.25rem;
 }
 
 #newsletter input[type="email"] {
+    width: 60%;
     box-shadow: 0 0 0 2px #ffffff inset;
     color: #ffffff;
 }

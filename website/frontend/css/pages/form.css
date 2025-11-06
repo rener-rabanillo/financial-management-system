@@ -1,15 +1,56 @@
-.login-container, .signup-container
-{
+#login-form, #signup-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-form *, #signup-form * {
+    width: 100%;
+}
+
+#login-form .form-container, #signup-form .form-container {
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    padding: 5rem 5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgb(230, 230, 230);
+    margin: 5rem;
 }
 
-.input-form {
+#login-form h1, #signup-form h1 {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#login-form form .wrapper, #signup-form form .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+}
+
+#login-form .wrapper > *, #signup-form .wrapper > * {
+    margin-bottom: 0.75rem;
+}
+
+#login-form label, #signup-form label {
+    width: auto;
+}
+
+.register-link {
+    color: var(--color-tertiary);
+}
+
+.login-link {
+    color: var(--color-primary);
+}
+
+.register-link:hover, .login-link:hover {
+    text-decoration: underline;
 }
