@@ -1,6 +1,9 @@
+@import url(/shared/css/globals.css);
+@import url(/shared/css/variables.css);
 @import url(globals.css);
 @import url(utils.css);
 @import url(pages/dashboard.css);
 @import url(pages/budget.css);
 @import url(pages/transactions.css);
 @import url(pages/reports.css);
+@import url(pages/accounts.css);

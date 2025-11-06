@@ -1,0 +1,118 @@
+.options-icon {
+    width: 25px;
+}
+
+
+
+/* Main content */
+
+#budget-main-content {
+    width: 100%;
+}
+
+#budget-main-content th {
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: black;
+}
+
+#budget-main-content td {
+    text-align: left;
+    padding: 5px 10px;
+}
+
+#budget-main-content tr:nth-child(even) {
+    background-color: rgb(230, 230, 230);
+}
+
+#budget-main-content table {
+    width: 100%;
+    padding: 0 1rem;
+    border-collapse: collapse;
+    border-bottom: 2px solid black; 
+}
+
+#budget-main-content .category-group {
+    padding: 10px;
+    color: white;
+    background-color: rgb(100, 100, 100);
+}
+
+#budget-main-content .category-group-text {
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+#budget-main-content .category-group-icon {
+    width: 15px;
+}
+
+
+
+/* Add category group form */
+
+#addCategoryGroupForm, #addCategoryForm, #setBudgetForm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#addCategoryGroupForm .background, #addCategoryForm .background, #setBudgetForm .background {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: var(--color-dim);
+}
+
+#addCategoryGroupForm .container, #addCategoryForm .container, #setBudgetForm .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem;
+    color: black;
+}
+
+#addCategoryGroupForm h1, #addCategoryForm h1, #setBudgetForm h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+#addCategoryGroupForm .grid, #addCategoryForm .grid, #setBudgetForm .grid {
+    display: grid;
+    grid-template:
+        1fr 50px /
+        36px 36px 36px 36px 36px 36px
+    ;
+    gap: 1rem;
+}
+
+#addCategoryGroupForm .grid > #group-name, #addCategoryForm .grid > #category, #setBudgetForm .grid > #amount {
+    grid-area: 1 / 1 / span 1 / span 6;
+}
+
+#addCategoryGroupForm .grid > #addButton, #addCategoryForm .grid > #addBtn, #setBudgetForm .grid > #setButton {
+    grid-area: 2 / 1 / span 1 / span 3;
+}
+
+#addCategoryGroupForm .grid > #cancelButton, #addCategoryForm .grid > #cancelBtn, #setBudgetForm .grid > #cancel {
+    grid-area: 2 / 4 / span 1 / span 3;
+}
+
+#addCategoryGroupForm .grid > *, #addCategoryGroupForm .grid > * > *,
+#addCategoryForm .grid > *, #addCategoryForm .grid > * > *,
+#setBudgetForm .grid > *, #setBudgetForm .grid > * > * {
+    width: 100%;
+}

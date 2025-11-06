@@ -1,70 +1,225 @@
-@font-face {
-    font-family: "Proxima Nova";
-    src: url(/shared/assets/fonts/proxima-nova-lt.otf);
-    font-weight: 300;
-    font-style: normal;
+/* App logo */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
-@font-face {
-    font-family: "Proxima Nova";
-    src: url(/shared/assets/fonts/proxima-nova-lt-it.otf);
-    font-weight: 300;
-    font-style: italic;
+.brand {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    pointer-events: none;
 }
 
-@font-face {
-    font-family: "Proxima Nova";
-    src: url(/shared/assets/fonts/proxima-nova-rg.ttf);
-    font-weight: 400;
-    font-style: normal;
+.brand-logo {
+    width: 50px;
+    margin-right: 0.5rem;
 }
 
-@font-face {
-    font-family: "Proxima Nova";
-    src: url(/shared/assets/fonts/proxima-nova-bold.otf);
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Proxima Nova";
-    src: url(/shared/assets/fonts/proxima-nova-bold-it.otf);
-    font-weight: 700;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Proxima Nova";
-    src: url(/shared/assets/fonts/proxima-nova-black.ttf);
+.brand-name {
+    font-family: "Montserrat", sans-serif;
     font-weight: 900;
-    font-style: normal;
+    font-size: 1.2rem;
+    color: white;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Proxima Nova", sans-serif;
+
+
+/* Navigation and user menu */
+
+nav, .user-menu {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.nav-link, .user-menu-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.nav-link:hover, .user-menu-link:hover {
+    background-color: #32608e;
+}
+
+.nav-link:focus, .user-menu-link:focus {
+    background-color: rgb(58, 108, 157);
+}
+
+.nav-icon, .user-menu-icon {
+    width: 20px;
+    margin-right: 0.5rem;
+    color: white;
+}
+
+.nav-text, .user-menu-text {
+    color: white;
+}
+
+
+
+/* Main menu */
+
+.main-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: var(--color-primary);
+}
+
+.main-menu > .wrapper {
+    width: 100%;
+    padding: 0 1rem;
+    margin-top: 82px;
+}
+
+
+
+/* Main content */
+
+main {
+    margin-left: 280px;
+    margin-right: 360px;
+}
+
+.heading {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.heading > h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding-left: 2rem;
+}
+
+
+
+/* Floating buttons */
+
+#addCategoryGroupButton, #addTransactionButton, #addAccountButton {
+    position: fixed;
+    bottom: 2rem;
+    right: calc(2rem + 360px);
+    width: 50px;
+}
+
+
+
+/* User profile */
+
+.user-profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.user-image {
+    width: 100px;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+}
+
+.user-name, .sidebar .amount {
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.user-email, .sidebar .label {
     font-weight: 400;
-    font-size: 100%;
-    line-height: 1.5;
+    font-size: 0.75rem;
 }
 
-ol, ul {
-    list-style-type: none;
+
+
+/* Stats */
+
+.total-balance, .amount-budgeted, .amount-spent, .amount-available {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
-a {
-    text-decoration: none;
+
+
+/* Sidebar */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 360px;
+    height: 100vh;
+    background-color: var(--color-secondary);
+}
+
+.sidebar > .wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2.5rem;
+    overflow-y: auto;
+}
+
+.sidebar > .wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+/* Input */
+
+input, select {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    box-shadow: 0 0 0 1px black inset;
+    border: none;
+    border-radius: 5px;
     color: black;
 }
 
-input, button, textarea, select {
-    font: inherit;
-    font-size: inherit;
+select, ::picker(select) {
+    appearance: base-select;
 }
 
-:root {
-    --primary-color: #85BF46;
-    --secondary-color: #245484;
+optgroup {
+    font-weight: 700;
+    padding: 5px;
+}
+
+option {
+    font-size: 0.9rem;
+}
+
+label {
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: black;
 }

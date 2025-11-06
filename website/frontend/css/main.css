@@ -1,4 +1,5 @@
 @import url(/shared/css/globals.css);
+@import url(/shared/css/variables.css);
 @import url(globals.css);
 @import url(utils.css);
 @import url(pages/home.css);

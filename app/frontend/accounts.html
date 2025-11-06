@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Accounts</title>
 	<link rel="icon" type="image/x-icon" href="/shared/assets/icons/favicon.ico">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -85,14 +85,62 @@
 
     <main>
         <section class="heading">
-            <h1>Welcome, Victorino!</h1>
+            <h1>Accounts</h1>
         </section>
 
-        <section class="main-content">
-            <div class="chart" style="width: 40vw;">
-                <canvas id="myChart"></canvas>
+        <section id="accounts-main-content">
+            <div class="container card card-yellow">
+                <span class="account-name">Cash</span>
+                <span class="account-name-label">Account name</span>
+                <span class="balance-label">Available balance</span>
+                <span class="balance">&#8369; 5,000.00</span>
+            </div>
+            <div class="container card card-yellow">
+                <span class="account-name">GCash</span>
+                <span class="account-name-label">Account name</span>
+                <span class="balance-label">Available balance</span>
+                <span class="balance">&#8369; 25,000.00</span>
+            </div>
+            <div class="container card card-yellow">
+                <span class="account-name">Landbank</span>
+                <span class="account-name-label">Account name</span>
+                <span class="balance-label">Available balance</span>
+                <span class="balance">&#8369; 435,000.00</span>
             </div>
         </section>
+
+        <button id="addAccountButton" class="btn btn-round-green">
+            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                <path fill="currentColor" d="M352 128C352 110.3 337.7 96 320 96C302.3 96 288 110.3 288 128L288 288L128 288C110.3 288 96 302.3 96 320C96 337.7 110.3 352 128 352L288 352L288 512C288 529.7 302.3 544 320 544C337.7 544 352 529.7 352 512L352 352L512 352C529.7 352 544 337.7 544 320C544 302.3 529.7 288 512 288L352 288L352 128z"/>
+            </svg>
+        </button>
+
+        <div id="addAccountForm">
+            <div class="background">
+                <div class="container card card-white">
+                    <h1>New Account</h1>
+                    <form action="" method="POST">
+                        <div class="grid">
+                            <div id="account">
+                                <label for="account-input">Account name</label>
+                                <input type="text" id="account-input" required>
+                            </div>
+                            <div id="balance">
+                                <label for="balance-input">Balance</label>
+                                <input type="number" id="balance-input" required>
+                            </div>
+                            <button type="submit" id="addButton" class="btn btn-smooth-edge-green">
+                                <span class="btn-text">Add</span>
+                            </button>
+                            <button type="button" id="cancelButton" class="btn btn-smooth-edge-red">
+                                <span class="btn-text">Cancel</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
 
     <div class="sidebar">
@@ -121,6 +169,6 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+    <script src="js/addAccount.js"></script>
 </body>
 </html>

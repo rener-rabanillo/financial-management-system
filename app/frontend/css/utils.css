@@ -1,48 +1,168 @@
-body {
-    display: flex;
-    flex-direction: column;
+/* Buttons */
+
+.btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.btn-icon {
+    width: 100%;
+    height: 100%;
 }
 
-.brand-link {
+.btn-text {
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+}
+
+
+/* Default round button */
+
+.btn-round-default {
+    padding: 0.5rem;
+    border-radius: 999px;
+}
+
+.btn-round-default:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.btn-round-default:active {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.50);
+}
+
+
+/* Green round button */
+
+.btn-round-green {
+    padding: 0.5rem;
+    border-radius: 999px;
+    color: white;
+    background-color: var(--color-tertiary);
+}
+
+.btn-round-green:hover {
+    background-color: #679a31;
+}
+
+.btn-round-green:active {
+    background-color: #47711b;
+}
+
+
+/* Gray round outline button */
+
+.btn-round-outline-gray {
+    font-size: 0.75rem;
+    padding: 0.25rem;
+    box-shadow: 0 0 0 2px rgb(100, 100, 100) inset;
+    border-radius: 999px;
+    color: rgb(100, 100, 100);
+}
+
+.btn-round-outline-gray:hover {
+    color: white;
+    background-color: rgb(100, 100, 100);
+}
+
+.btn-round-outline-gray:active {
+    box-shadow: 0 0 0 2px rgb(70, 70, 70) inset;
+    color: white;
+    background-color: rgb(70, 70, 70);
+}
+
+
+/* White round outline button */
+
+.btn-round-outline-white {
+    padding: 0.3rem;
+    box-shadow: 0 0 0 2px white inset;
+    border-radius: 999px;
+    color: white;
+}
+
+.btn-round-outline-white:hover {
+    color: rgb(100, 100, 100);
+    background-color: white;
+}
+
+.btn-round-outline-white:active {
+    box-shadow: 0 0 0 2px rgb(200, 200, 200) inset;
+    color: rgb(100, 100, 100);
+    background-color: rgb(200, 200, 200);
+}
+
+
+/* Green smooth edge button */
+
+.btn-smooth-edge-green {
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--color-tertiary);
+}
+
+.btn-smooth-edge-green:hover {
+    background-color: #679a31;
+}
+
+.btn-smooth-edge-green:active {
+    background-color: #47711b;
+}
+
+
+/* Red smooth edge button */
+
+.btn-smooth-edge-red {
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(190, 68, 68);
+}
+
+.btn-smooth-edge-red:hover {
+    background-color: rgb(166, 38, 38);
+}
+
+.btn-smooth-edge-red:active {
+    background-color: rgb(117, 17, 17);
+}
+
+
+
+/* Cards */
+
+.card {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem 0 1rem 1rem;
+    border-radius: 10px;
 }
 
-header .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card-white {
+    background-color: white;
 }
 
-.header-icon {
-    width: 40px;
-    margin: 1rem 1rem 1rem 0;
+.card-yellow {
+    background-color: var(--color-quaternary);
 }
 
-body .wrapper {
-    display: flex;
-    flex-direction: row;
+.card-white-shadow {
+    box-shadow: 0 0 10px 2px rgb(230, 230, 230);
+    background-color: white;
 }
 
-nav ul {
-    display: flex;
-    flex-direction: column;
+.card-light-transparent {
+    background-color: rgba(255, 255, 255, 0.35);
 }
 
-.nav-link {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
 
-.nav-icon {
-    width: 20px;
+
+/* Dividers */
+
+.divider {
+    padding: 1rem 0;
 }

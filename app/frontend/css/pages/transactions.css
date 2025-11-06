@@ -1,0 +1,115 @@
+/* Main content */
+
+#transactions-main-content {
+    width: 100%;
+}
+
+#transactions-main-content th {
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: black;
+}
+
+#transactions-main-content td {
+    text-align: left;
+    padding: 5px 10px;
+}
+
+#transactions-main-content tr:nth-child(odd) {
+    background-color: rgb(230, 230, 230);
+}
+
+#transactions-main-content tr:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#transactions-main-content table {
+    width: 100%;
+    padding: 0 1rem;
+    border-collapse: collapse;
+    border-bottom: 2px solid black;
+}
+
+
+
+/* Add transaction form */
+
+#addTransactionForm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#addTransactionForm .background {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: var(--color-dim);
+}
+
+#addTransactionForm .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem;
+    color: black;
+}
+
+#addTransactionForm h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+#addTransactionForm .grid {
+    display: grid;
+    grid-template:
+        1fr 1fr 1fr 1fr 50px /
+        36px 36px 36px 36px 36px 36px 36px 36px 
+    ;
+    gap: 1rem;
+}
+
+#addTransactionForm .grid > #date {
+    grid-area: 1 / 1 / span 1 / span 8;
+}
+
+#addTransactionForm .grid > #account {
+    grid-area: 2 / 1 / span 1 / span 4;
+}
+
+#addTransactionForm .grid > #category {
+    grid-area: 2 / 5 / span 1 / span 4;
+}
+
+#addTransactionForm .grid > #note {
+    grid-area: 3 / 1 / span 1 / span 8;
+}
+
+#addTransactionForm .grid > #amount {
+    grid-area: 4 / 1 / span 1 / span 8;
+}
+
+#addTransactionForm .grid > #addButton {
+    grid-area: 5 / 1 / span 1 / span 3;
+}
+
+#addTransactionForm .grid > #cancelButton {
+    grid-area: 5 / 4 / span 1 / span 3;
+}
+
+#addTransactionForm .grid > *, #addTransactionForm .grid > * > * {
+    width: 100%;
+}

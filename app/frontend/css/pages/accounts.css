@@ -1,0 +1,116 @@
+/* Main content */
+
+#accounts-main-content {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+}
+
+#accounts-main-content > .container {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.5s;
+}
+
+#accounts-main-content .account-name, #accounts-main-content .balance {
+    font-weight: 900;
+    font-size: 1.2rem;
+    width: 100%;
+    color: var(--color-primary);
+}
+
+#accounts-main-content .account-name-label, #accounts-main-content .balance-label {
+    font-weight: 700;
+    font-size: 0.75rem;
+    width: 100%;
+    color: var(--color-secondary);
+}
+
+#accounts-main-content .account-name, #accounts-main-content .account-name-label {
+    text-align: left;
+}
+
+#accounts-main-content .balance, #accounts-main-content .balance-label {
+    text-align: right;
+}
+
+#accounts-main-content > .container:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+/* Add transaction form */
+
+#addAccountForm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#addAccountForm .background {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: var(--color-dim);
+}
+
+#addAccountForm .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem;
+    color: black;
+}
+
+#addAccountForm h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+#addAccountForm .grid {
+    display: grid;
+    grid-template:
+        1fr 1fr 50px /
+        36px 36px 36px 36px 36px 36px
+    ;
+    gap: 1rem;
+}
+
+#addAccountForm .grid > #account {
+    grid-area: 1 / 1 / span 1 / span 6;
+}
+
+#addAccountForm .grid > #balance {
+    grid-area: 2 / 1 / span 1 / span 6;
+}
+
+#addAccountForm .grid > #addButton {
+    grid-area: 3 / 1 / span 1 / span 3;
+}
+
+#addAccountForm .grid > #cancelButton {
+    grid-area: 3 / 4 / span 1 / span 3;
+}
+
+#addAccountForm .grid > *, #addAccountForm .grid > * > * {
+    width: 100%;
+}

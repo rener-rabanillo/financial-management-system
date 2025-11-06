@@ -1,0 +1,34 @@
+.reports-main-content {
+    display: grid;
+    grid-template:
+        1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr /
+        1fr 1fr 1fr 1fr
+    ;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: rgb(245, 245, 245);
+}
+
+#net-worth {
+    grid-area: 1 / 1 / span 3 / span 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+#cash-inflow {
+    grid-area: 4 / 1 / span 2 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+#cash-outflow {
+    grid-area: 4 / 3 / span 2 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
