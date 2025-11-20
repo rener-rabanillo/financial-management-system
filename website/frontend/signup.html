@@ -25,19 +25,19 @@
 					<form action="" method="">
 						<div class="wrapper">
 							<div class="input-wrapper">
-								<input type="text" id="first-name" placeholder="" required>
+								<input type="text" id="first-name" placeholder="" pattern="^[A-Za-z ]+$" required>
 								<label for="first-name">First name</label>
 							</div>
 							<div class="input-wrapper">
-								<input type="text" id="last-name" placeholder="" required>
+								<input type="text" id="last-name" placeholder="" pattern="^[A-Za-z ]+$" required>
 								<label for="last-name">Last name</label>
 							</div>
 							<div class="input-wrapper">
-								<input type="email" id="email" placeholder="" required>
+								<input type="email" id="email" placeholder="" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
 								<label for="email">Email address</label>
 							</div>
 							<div class="input-wrapper">
-								<input type="password" id="password" placeholder="" required>
+								<input type="password" id="password" placeholder="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
 								<label for="password">Password</label>
 							</div>
 							<div class="input-wrapper">
