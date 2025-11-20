@@ -25,11 +25,11 @@
 				<h1 class="login__heading">Log in</h1>
 				<form class="login__form form" action="" method="POST">
 					<div class="login__form-wrapper form__wrapper--floating-label">
-						<input class="login__form-text-box form__text-box--floating-label" id="loginEmail" name="loginEmail" type="email" placeholder="" required>
+						<input class="login__form-text-box form__text-box--floating-label" id="loginEmail" name="loginEmail" type="email" placeholder="" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
 						<label class="login__form-label form__label--floating-label" for="loginEmail">Email</label>
 					</div>
 					<div class="login__form-wrapper form__wrapper--floating-label">
-						<input class="login__form-text-box form__text-box--floating-label" id="loginPassword" name="loginPassword" type="password" placeholder="" required>
+						<input class="login__form-text-box form__text-box--floating-label" id="loginPassword" name="loginPassword" type="password" placeholder="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
 						<label class="login__form-label form__label--floating-label" for="loginPassword">Password</label>
 					</div>
 					<button class="login__form-button btn btn-primary" type="submit">Log in</button>
