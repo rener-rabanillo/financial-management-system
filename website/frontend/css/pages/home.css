@@ -1,54 +1,44 @@
 /* Hero section */
 
-#hero {
+.hero {
     position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     height: 35rem;
-    overflow: hidden;
-}
-
-#hero .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin: 8rem;
+    gap: 1rem;
+    padding: 5rem;
+    overflow: hidden;
 }
 
-#hero h1 {
-    font-family: "Montserrat", "Inter", sans-serif;
+.hero__heading {
+    font-family: "Montserrat", sans-serif;
     font-weight: 900;
     font-size: 3rem;
     line-height: 1.2;
     text-align: left;
     text-transform: capitalize;
     text-wrap: balance;
-    margin-bottom: 1rem;
 }
 
-#hero h3 {
+.hero__subheading {
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     text-align: left;
     text-wrap: balance;
-    margin-bottom: 1.5rem;
 }
 
-#hero .hero-buttons {
+.hero__buttons {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    gap: 1rem;
 }
 
-#hero .hero-buttons a {
-    margin-right: 1rem;
-}
-
-#hero img {
+.hero__image {
     position: absolute;
-    bottom: -35rem;
+    bottom: -36rem;
     right: -5rem;
     z-index: -10;
     height: 80rem;
@@ -56,83 +46,140 @@
 
 
 
-/* Description section */
+/* Product description section */
 
-#app-description {
+.prod-desc {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#app-description .container {
+.prod-desc__container {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 3rem;
     width: 95%;
-    height: 35rem;
-    background-color: var(--color-primary);
+    padding: 5rem;
     border-radius: 20px;
 }
 
-#app-description .frame {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 100%;
+.prod-desc__image {
+    width: 24rem;
 }
 
-#app-description img {
-    height: 30rem;
-}
-
-#app-description .wrapper {
+.prod-desc__details {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    gap: 1rem;
     width: 50%;
-    padding: 3rem;
 }
 
-#app-description h2 {
+.prod-desc__heading {
     font-weight: 700;
     font-size: 1.5rem;
     text-align: left;
-    color: #ffffff;
-    margin-bottom: 1rem;
+    color: white;
 }
 
-#app-description p {
+.prod-desc__paragraph {
     font-weight: 400;
     font-size: 1rem;
     text-align: left;
     text-wrap: balance;
-    color: #ffffff;
-    margin-bottom: 1rem;
+    color: white;
 }
 
 
 
-/* Benefits section */
+/* Value proposition section */
 
-#app-benefits {
+.value-prop {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5rem;
+    padding: 5rem 2rem;
 }
 
-#app-benefits h2 {
+.value-prop__heading {
     font-weight: 700;
     font-size: 1.5rem;
     text-align: center;
-    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
-#app-benefits .wrapper {
+.value-prop__list {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 2rem;
+    margin: 1rem;
+}
+
+.value-prop__container {
+    width: 20rem;
+    height: 30rem;
+    overflow: hidden;
+}
+
+.value-prop__image-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 20rem;
+    overflow: hidden;
+}
+
+.value-prop__image {
+    height: 22rem;
+    background-color: var(--color-secondary-500);
+    transition: all 0.5s;
+}
+
+.value-prop__image:hover {
+    transform: scale(1.2);
+}
+
+.value-prop__caption {
+    padding: 2rem;
+}
+
+
+
+/* For small-sized monitors and laptops */
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+    .hero__image {
+        position: absolute;
+        bottom: -20rem;
+        right: -5rem;
+        z-index: -10;
+        height: 60rem;
+    }
+
+    @media screen and (max-width: 945px) {
+        .prod-desc__image {
+            width: 18rem;
+        }
+    }
+}
+
+
+
+/* For tablets */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .hero__image {
+        position: absolute;
+        bottom: -15rem;
+        right: -5rem;
+        z-index: -10;
+        height: 55rem;
+    }
+
+    .prod-desc__image {
+        width: 20rem;
+    }
 }
