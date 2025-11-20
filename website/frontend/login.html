@@ -24,11 +24,11 @@
 				<form action="" method="POST">
 					<div class="wrapper">
 						<div class="input-wrapper">
-							<input type="email" id="email" placeholder="" required>
+							<input type="email" id="email" placeholder="" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
 							<label for="email">Email</label>
 						</div>
 						<div class="input-wrapper">
-							<input type="password" id="password" placeholder="" required>
+							<input type="password" id="password" placeholder="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
 							<label for="password">Password</label>
 						</div>
 						<button type="submit" class="btn btn-primary">Log in</button>
