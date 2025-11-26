@@ -41,15 +41,15 @@
     padding: 0.5rem;
     border-radius: 999px;
     color: white;
-    background-color: var(--color-tertiary);
+    background-color: var(--color-accent-500);
 }
 
 .btn-round-green:hover {
-    background-color: #679a31;
+    background-color: var(--color-accent-700);
 }
 
 .btn-round-green:active {
-    background-color: #47711b;
+    background-color: var(--color-accent-900);
 }
 
 
@@ -78,7 +78,7 @@
 /* White round outline button */
 
 .btn-round-outline-white {
-    padding: 0.3rem;
+    padding: 0.2rem;
     box-shadow: 0 0 0 2px white inset;
     border-radius: 999px;
     color: white;
@@ -102,15 +102,15 @@
     padding: 0.5rem;
     border-radius: 5px;
     color: white;
-    background-color: var(--color-tertiary);
+    background-color: var(--color-accent-500);
 }
 
 .btn-smooth-edge-green:hover {
-    background-color: #679a31;
+    background-color: var(--color-accent-700);
 }
 
 .btn-smooth-edge-green:active {
-    background-color: #47711b;
+    background-color: var(--color-accent-900);
 }
 
 
@@ -147,7 +147,7 @@
 }
 
 .card-yellow {
-    background-color: var(--color-quaternary);
+    background-color: var(--color-tertiary-100);
 }
 
 .card-white-shadow {

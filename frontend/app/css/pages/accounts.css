@@ -24,14 +24,14 @@
     font-weight: 900;
     font-size: 1.2rem;
     width: 100%;
-    color: var(--color-primary);
+    color: var(--color-primary-500);
 }
 
 #accounts-main-content .account-name-label, #accounts-main-content .balance-label {
     font-weight: 700;
     font-size: 0.75rem;
     width: 100%;
-    color: var(--color-secondary);
+    color: var(--color-secondary-500);
 }
 
 #accounts-main-content .account-name, #accounts-main-content .account-name-label {

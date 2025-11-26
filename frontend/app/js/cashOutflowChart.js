@@ -8,7 +8,7 @@ new Chart(cashOutflowContext, {
             label: 'Cash Outflow',
             data: [18000, 17500, 68900],
             borderWidth: 1,
-            backgroundColor: '#FFFFFF',
+            backgroundColor: '#245484',
             borderColor: '#245484',
             tension: 0.4
         }]

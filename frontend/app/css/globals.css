@@ -50,11 +50,11 @@ nav, .user-menu {
 }
 
 .nav-link:hover, .user-menu-link:hover {
-    background-color: #32608e;
+    background-color: var(--color-primary-300);
 }
 
 .nav-link:focus, .user-menu-link:focus {
-    background-color: rgb(58, 108, 157);
+    background-color: var(--color-primary-100);
 }
 
 .nav-icon, .user-menu-icon {
@@ -77,7 +77,7 @@ nav, .user-menu {
     left: 0;
     width: 280px;
     height: 100vh;
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-500);
 }
 
 .main-menu > .wrapper {
@@ -101,12 +101,14 @@ main {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    background-color: var(--color-primary-900);
 }
 
 .heading > h1 {
     font-weight: 700;
     font-size: 1.5rem;
     padding-left: 2rem;
+    color: white;
 }
 
 
@@ -174,7 +176,7 @@ main {
     right: 0;
     width: 360px;
     height: 100vh;
-    background-color: var(--color-secondary);
+    background-color: var(--color-tertiary-300);
 }
 
 .sidebar > .wrapper {

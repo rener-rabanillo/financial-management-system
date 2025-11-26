@@ -21,6 +21,7 @@
 }
 
 #budget-main-content td {
+    font-size: 0.9rem;
     text-align: left;
     padding: 5px 10px;
 }
@@ -44,11 +45,11 @@
 
 #budget-main-content .category-group-text {
     font-weight: 700;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 #budget-main-content .category-group-icon {
-    width: 15px;
+    width: 12px;
 }
 
 

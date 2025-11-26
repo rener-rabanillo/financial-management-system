@@ -24,26 +24,37 @@
 			<div class="signup__container card--shadow">
 				<h1 class="signup__heading">New account</h1>
 				<form class="signup__form form" action="" method="">
+					
 					<div class="signup__form-wrapper form__wrapper--floating-label">
 						<input class="signup__form-text-box form__text-box--floating-label" id="firstName" name="firstName" type="text" placeholder="" pattern="^[A-Za-z ]+$" required>
 						<label class="signup__form-label form__label--floating-label" for="firstName">First name</label>
 					</div>
+					<span class="hidden" id="firstNameErr"></span>
+
 					<div class="signup__form-wrapper form__wrapper--floating-label">
 						<input class="signup__form-text-box form__text-box--floating-label" id="lastName" name="lastName" type="text" placeholder="" pattern="^[A-Za-z ]+$" required>
 						<label class="signup__form-label form__label--floating-label" for="lastName">Last name</label>
 					</div>
+					<span class="hidden" id="lastNameErr"></span>
+
 					<div class="signup__form-wrapper form__wrapper--floating-label">
 						<input class="signup__form-text-box form__text-box--floating-label" id="signupEmail" name="signupEmail" type="email" placeholder="" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
 						<label class="signup__form-label form__label--floating-label" for="signupEmail">Email address</label>
 					</div>
+					<span class="hidden" id="signupEmailErr"></span>
+
 					<div class="signup__form-wrapper form__wrapper--floating-label">
 						<input class="signup__form-text-box form__text-box--floating-label" id="signupPassword" name="signupPassword" type="password" placeholder="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
 						<label class="signup__form-label form__label--floating-label" for="signupPassword">Password</label>
 					</div>
+					<span class="hidden" id="signupPasswordErr"></span>
+
 					<div class="signup__form-wrapper form__wrapper--floating-label">
 						<input class="signup__form-text-box form__text-box--floating-label" id="signupConfirmPassword" name="signupConfirmPassword" type="password" placeholder="" required>
 						<label class="signup__form-label form__label--floating-label" for="signupConfirmPassword">Confirm password</label>
 					</div>
+					<span class="hidden" id="signupConfirmPasswordErr"></span>
+
 					<button class="signup__form-button btn btn-accent" type="submit">Create account</button>
 				</form>
 				<p class="signup__paragraph">Already have an account?&nbsp;<a href="login.html" class="login-link">Log in</a></p>
@@ -110,5 +121,6 @@
 		</div>
 	</footer>
 
+	<script src="js/inputValidation.js"></script>
 </body>
 </html>

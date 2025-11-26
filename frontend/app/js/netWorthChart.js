@@ -8,7 +8,7 @@ new Chart(netWorthContext, {
             label: 'Net Worth',
             data: [500000, 450000, 480000, 320000, 200500, 340000, 455000, 420000, 390000, 370000, 410000],
             borderWidth: 1,
-            backgroundColor: '#FFFFFF',
+            backgroundColor: '#245484',
             borderColor: '#245484',
             tension: 0.4
         }]

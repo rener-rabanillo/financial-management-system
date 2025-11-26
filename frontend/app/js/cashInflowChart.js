@@ -8,7 +8,7 @@ new Chart(cashInflowContext, {
             label: 'Cash Inflow',
             data: [20000, 20000, 22000],
             borderWidth: 1,
-            backgroundColor: '#FFFFFF',
+            backgroundColor: '#85BF46',
             borderColor: '#245484',
             tension: 0.4
         }]

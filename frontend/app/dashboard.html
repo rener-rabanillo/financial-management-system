@@ -88,9 +88,35 @@
             <h1>Welcome, Victorino!</h1>
         </section>
 
-        <section class="main-content">
-            <div class="chart" style="width: 40vw;">
-                <canvas id="myChart"></canvas>
+        <section class="dashboard-main-content">
+            <div id="account-summary" class="card card-white">
+                <h1>Account Summary</h1>
+                <div class="account">
+                    <span class="account-name">Cash</span>
+                    <span class="available balance">&#8369; 5,000.00</span>
+                </div>
+                <div class="account">
+                    <span class="account-name">GCash</span>
+                    <span class="available balance">&#8369; 25,000.00</span>
+                </div>
+                <div class="account">
+                    <span class="account-name">Landbank</span>
+                    <span class="available balance">&#8369; 435,000.00</span>
+                </div>
+            </div>
+
+            <div id="activity-past-month" class="card card-white">
+                <h1>Activity</h1>
+                <div>
+                    <canvas id="activityChart"></canvas>
+                </div>
+            </div>
+
+            <div id="expenses-per-category" class="card card-white">
+                <h1>Expenses per Category</h1>
+                <div id="expense">
+                    <canvas id="expenseChart"></canvas>
+                </div>
             </div>
         </section>
     </main>
@@ -122,5 +148,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+    <script src="js/activityChart.js"></script>
+    <script src="js/expenseChart.js"></script>
 </body>
 </html>
