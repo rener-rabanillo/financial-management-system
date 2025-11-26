@@ -1,5 +1,5 @@
-@import url(/shared/css/variables.css);
-@import url(/shared/css/globals.css);
+@import url(/frontend/shared/css/variables.css);
+@import url(/frontend/shared/css/globals.css);
 @import url(utils.css);
 @import url(globals.css);
 @import url(pages/dashboard.css);
