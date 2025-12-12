@@ -1,8 +1,7 @@
-// Login form
+
 const loginEmail = document.getElementById("loginEmail");
 const loginPassword = document.getElementById("loginPassword");
 
-// Signup form
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
 const signupEmail = document.getElementById("signupEmail");
@@ -14,88 +13,80 @@ const firstNameErr = document.getElementById("firstNameErr");
 const lastNameErr = document.getElementById("lastNameErr");
 const signupEmailErr = document.getElementById("signupEmailErr");
 const signupPasswordErr = document.getElementById("signupPasswordErr");
-const signupConfirmPasswordErr = document.getElementById("signupConfirmPassword");
+const signupConfirmPasswordErr = document.getElementById("signupConfirmPasswordErr");
 
 firstName.addEventListener('input', () => {
-    firstNameErr.textContent = "";
-
-    const regex = new RegExp("^[A-Za-z ]+$");
+    const regex = /^[A-Za-z ]+$/;
+    firstNameErr.classList.add('hidden');
 
     if (firstName.value === "") {
         firstNameErr.textContent = "Please enter your first name.";
         firstNameErr.classList.remove('hidden');
-        return;
-    }
-
-    if (!regex.test(firstName.value)) {
+    } else if (!regex.test(firstName.value)) {
         firstNameErr.textContent = "Names should contain letters only.";
         firstNameErr.classList.remove('hidden');
-        return;
     }
-
-    firstNameErr.textContent = "";
-    firstNameErr.classList.add('hidden');
 });
 
 lastName.addEventListener('input', () => {
-    lastNameErr.textContent = "";
-
-    const regex = new RegExp("^[A-Za-z ]+$");
+    const regex = /^[A-Za-z ]+$/;
+    lastNameErr.classList.add('hidden');
 
     if (lastName.value === "") {
         lastNameErr.textContent = "Please enter your last name.";
         lastNameErr.classList.remove('hidden');
-        return;
-    }
-
-    if (!regex.test(lastName.value)) {
+    } else if (!regex.test(lastName.value)) {
         lastNameErr.textContent = "Names should contain letters only.";
         lastNameErr.classList.remove('hidden');
-        return;
     }
-
-    lastNameErr.textContent = "";
-    lastNameErr.classList.add('hidden');
 });
 
-signupEmail.addEventListener('input', () => {
-    signupEmailErr.textContent = "";
 
+signupEmail.addEventListener('input', () => {
     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    signupEmailErr.classList.add('hidden');
 
     if (signupEmail.value === "") {
-        signupEmailErr.textContent = "Please enter your address.";
+        signupEmailErr.textContent = "Please enter your email address.";
         signupEmailErr.classList.remove('hidden');
-    }
-
-    if (regex.test(signupEmail.value)) {
+    } else if (!regex.test(signupEmail.value)) {
         signupEmailErr.textContent = "Please enter a valid email address.";
         signupEmailErr.classList.remove('hidden');
     }
 });
 
 signupPassword.addEventListener('input', () => {
-    signupPasswordErr.textContent = "";
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+    signupPasswordErr.classList.add('hidden');
 
-    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-
-    if (regex.test(signupPasswordErr.value)) {
-        signupPasswordErr.textContent = "Please enter a valid password.";
+    if (!regex.test(signupPassword.value)) {
+        signupPasswordErr.textContent = "Password must have 8+ chars, upper, lower, number & symbol.";
         signupPasswordErr.classList.remove('hidden');
     }
 });
 
+
 signupConfirmPassword.addEventListener('input', () => {
-    signupConfirmPasswordErr.textContent = "";
+    signupConfirmPasswordErr.classList.add('hidden');
+
+    if (signupConfirmPassword.value !== signupPassword.value) {
+        signupConfirmPasswordErr.textContent = "Passwords do not match.";
+        signupConfirmPasswordErr.classList.remove('hidden');
+    }
 });
 
 function validateForm() {
-    signupConfirmPasswordErr.textContent = "";
+    let valid = true;
 
-    if (isValid) {
-        alert("Form submitted successfully!");
-        return true;
-    } else {
-        return false;
+    if (firstName.value === "") { valid = false; firstNameErr.classList.remove('hidden'); }
+    if (lastName.value === "") { valid = false; lastNameErr.classList.remove('hidden'); }
+    if (signupEmail.value === "") { valid = false; signupEmailErr.classList.remove('hidden'); }
+    if (signupPassword.value === "") { valid = false; signupPasswordErr.classList.remove('hidden'); }
+    if (signupConfirmPassword.value !== signupPassword.value) {
+        valid = false;
+        signupConfirmPasswordErr.textContent = "Passwords do not match.";
+        signupConfirmPasswordErr.classList.remove('hidden');
     }
+
+    return valid;
 }
