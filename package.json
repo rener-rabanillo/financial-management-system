@@ -1,0 +1,45 @@
+{
+  "name": "financial-management-system",
+  "version": "1.0.0",
+  "description": "A web application for expense tracking and budget analysis.",
+  "homepage": "https://github.com/rener-rabanillo/financial-management-system#readme",
+  "bugs": {
+    "url": "https://github.com/rener-rabanillo/financial-management-system/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rener-rabanillo/financial-management-system.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Reñer Rabanillo",
+    "email": "rener.g.rabanillo01@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Victorino Castro III",
+      "email": "nogcastro4@gmail.com"
+    },
+    {
+      "name": "Rick Amroe Ledda",
+      "email": "leddarickamroe@gmail.com"
+    },
+    {
+      "name": "Marc Jake Valencia",
+      "email": "valenciamarcjake09@gmail.com"
+    }
+  ],
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
