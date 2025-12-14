@@ -1,8 +1,8 @@
-@import url(/frontend/shared/css/variables.css);
-@import url(/frontend/shared/css/globals.css);
-@import url(utils.css);
-@import url(globals.css);
-@import url(pages/home.css);
-@import url(pages/about.css);
-@import url(pages/contact.css);
-@import url(pages/form.css);
+@import url(/styles/shared/variables.css);
+@import url(/styles/shared/globals.css);
+@import url(/styles/website/utils.css);
+@import url(/styles/website/globals.css);
+@import url(/styles/website/pages/home.css);
+@import url(/styles/website/pages/about.css);
+@import url(/styles/website/pages/contact.css);
+@import url(/styles/website/pages/form.css);

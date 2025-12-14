@@ -4,102 +4,104 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sign Up | Budget Buddy</title>
-	<link rel="icon" type="image/x-icon" href="/frontend/shared/assets/icons/favicon.ico">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+	<link rel="stylesheet" href="/styles/website/main.css">
 </head>
 <body>
 
 	<header class="header">
 		<nav class="header__nav nav">
 			<div class="nav__brand-logo brand-logo">
-				<a class="brand-logo__link" href="index.html">
-					<img class="brand-logo__image" src="/frontend/shared/assets/images/budget-buddy-logo.png" alt="Budget Buddy Logo">
+				<a class="brand-logo__link" href="/">
+					<img class="brand-logo__image" src="/images/budget-buddy-logo.png" alt="Budget Buddy Logo">
 				</a>
 			</div>
 		</nav>
 	</header>
 
 	<main>
-    <section class="signup">
-        <div class="signup__container card--shadow">
-            <h1 class="signup__heading">New account</h1>
+		<section class="signup">
+			<div class="signup__container card--shadow">
+				<h1 class="signup__heading">New account</h1>
+				<form class="signup__form form" method="POST" action="/auth/signup">
 
-            <form class="signup__form form" id="signupForm" onsubmit="return validateForm()">
+					<!-- First Name -->
+					<div class="signup__form-wrapper form__wrapper--floating-label">
+						<input
+							class="signup__form-text-box form__text-box--floating-label"
+							id="first-name"
+							name="first-name"
+							type="text"
+							placeholder=""
+							required>
+						<label class="signup__form-label form__label--floating-label" for="first-name">First name</label>
+					</div>
+					<span class="hidden" id="first-name-error"></span>
 
-                <!-- First Name -->
-                <div class="signup__form-wrapper form__wrapper--floating-label">
-                    <input class="signup__form-text-box form__text-box--floating-label"
-                           id="firstName"
-                           name="firstName"
-                           type="text"
-                           pattern="^[A-Za-z ]+$"
-                           required>
-                    <label class="signup__form-label form__label--floating-label" for="firstName">First name</label>
-                </div>
-                <span class="hidden" id="firstNameErr"></span>
+					<!-- Last Name -->
+					<div class="signup__form-wrapper form__wrapper--floating-label">
+						<input
+							class="signup__form-text-box form__text-box--floating-label"
+							id="last-name"
+							name="last-name"
+							type="text"
+							placeholder=""
+							required>
+						<label class="signup__form-label form__label--floating-label" for="last-name">Last name</label>
+					</div>
+					<span class="hidden" id="last-name-error"></span>
 
-                <!-- Last Name -->
-                <div class="signup__form-wrapper form__wrapper--floating-label">
-                    <input class="signup__form-text-box form__text-box--floating-label"
-                           id="lastName"
-                           name="lastName"
-                           type="text"
-                           pattern="^[A-Za-z ]+$"
-                           required>
-                    <label class="signup__form-label form__label--floating-label" for="lastName">Last name</label>
-                </div>
-                <span class="hidden" id="lastNameErr"></span>
+					<!-- Email -->
+					<div class="signup__form-wrapper form__wrapper--floating-label">
+						<input
+							class="signup__form-text-box form__text-box--floating-label"
+							id="email"
+							name="email"
+							type="email"
+							placeholder=""
+							required>
+						<label class="signup__form-label form__label--floating-label" for="email">Email address</label>
+					</div>
+					<span class="hidden" id="email-error"></span>
 
-                <!-- Email -->
-                <div class="signup__form-wrapper form__wrapper--floating-label">
-                    <input class="signup__form-text-box form__text-box--floating-label"
-                           id="signupEmail"
-                           name="signupEmail"
-                           type="email"
-                           pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                           required>
-                    <label class="signup__form-label form__label--floating-label" for="signupEmail">Email address</label>
-                </div>
-                <span class="hidden" id="signupEmailErr"></span>
+					<!-- Password -->
+					<div class="signup__form-wrapper form__wrapper--floating-label">
+						<input
+							class="signup__form-text-box form__text-box--floating-label"
+							id="password"
+							name="password"
+							type="password"
+							placeholder=""
+							required>
+						<label class="signup__form-label form__label--floating-label" for="password">Password</label>
+					</div>
+					<span class="hidden" id="password-error"></span>
 
-                <!-- Password -->
-                <div class="signup__form-wrapper form__wrapper--floating-label">
-                    <input class="signup__form-text-box form__text-box--floating-label"
-                           id="signupPassword"
-                           name="signupPassword"
-                           type="password"
-                           pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$"
-                           required>
-                    <label class="signup__form-label form__label--floating-label" for="signupPassword">Password</label>
-                </div>
-                <span class="hidden" id="signupPasswordErr"></span>
+					<!-- Confirm Password -->
+					<div class="signup__form-wrapper form__wrapper--floating-label">
+						<input
+							class="signup__form-text-box form__text-box--floating-label"
+							id="confirm-password"
+							name="confirm-password"
+							type="password"
+							placeholder=""
+							required>
+						<label class="signup__form-label form__label--floating-label" for="confirm-password">Confirm password</label>
+					</div>
+					<span class="hidden" id="confirm-password-error"></span>
 
-                <!-- Confirm Password -->
-                <div class="signup__form-wrapper form__wrapper--floating-label">
-                    <input class="signup__form-text-box form__text-box--floating-label"
-                           id="signupConfirmPassword"
-                           name="signupConfirmPassword"
-                           type="password"
-                           required>
-                    <label class="signup__form-label form__label--floating-label" for="signupConfirmPassword">Confirm password</label>
-                </div>
-                <span class="hidden" id="signupConfirmPasswordErr"></span>
+					<button class="signup__form-button btn btn-accent" type="submit">Create account</button>
 
-                <button class="signup__form-button btn btn-accent" type="submit">Create account</button>
-            </form>
-
-            <p class="signup__paragraph">
-                Already have an account? <a href="login.html" class="login-link">Log in</a>
-            </p>
-        </div>
-    </section>
-</main>
-
+				</form>
+				<p class="signup__paragraph">Already have an account?&nbsp;<a href="/login" class="login-link">Log in</a></p>
+			</div>
+		</section>
+	</main>
 
 	<footer class="footer">
 		<div class="footer__brand-logo brand-logo">
-			<a class="brand-logo__link" href="index.html">
-				<img class="brand-logo__image" src="/frontend/shared/assets/images/budget-buddy-logo.png" alt="Budget Buddy Logo">
+			<a class="brand-logo__link" href="/">
+				<img class="brand-logo__image" src="/images/budget-buddy-logo.png" alt="Budget Buddy Logo">
 			</a>
 		</div>
 		<div class="footer__contact-info contact-info">
@@ -155,6 +157,6 @@
 		</div>
 	</footer>
 
-	<script src="js/inputValidation.js"></script>
+	<script src="/scripts/website/signup-form-validation.js"></script>
 </body>
 </html>

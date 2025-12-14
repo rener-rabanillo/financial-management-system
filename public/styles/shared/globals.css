@@ -2,56 +2,56 @@
 
 @font-face {
     font-family: "Inter";
-    src: url(/frontend/shared/assets/fonts/inter-thin.ttf);
+    src: url(/fonts/inter/inter-thin.ttf);
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Inter";
-    src: url(/frontend/shared/assets/fonts/inter-thin-italic.ttf);
+    src: url(/fonts/inter/inter-thin-italic.ttf);
     font-weight: 100;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Inter";
-    src: url(/frontend/shared/assets/fonts/inter-regular.ttf);
+    src: url(/fonts/inter/inter-regular.ttf);
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Inter";
-    src: url(/frontend/shared/assets/fonts/inter-regular-italic.ttf);
+    src: url(/fonts/inter/inter-regular-italic.ttf);
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Inter";
-    src: url(/frontend/shared/assets/fonts/inter-bold.ttf);
+    src: url(/fonts/inter/inter-bold.ttf);
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Inter";
-    src: url(/frontend/shared/assets/fonts/inter-bold-italic.ttf);
+    src: url(/fonts/inter/inter-bold-italic.ttf);
     font-weight: 700;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Inter";
-    src: url(/frontend/shared/assets/fonts/inter-black.ttf);
+    src: url(/fonts/inter/inter-black.ttf);
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Inter";
-    src: url(/frontend/shared/assets/fonts/inter-black-italic.ttf);
+    src: url(/fonts/inter/inter-black-italic.ttf);
     font-weight: 900;
     font-style: italic;
 }
@@ -62,56 +62,56 @@
 
 @font-face {
     font-family: "Montserrat";
-    src: url(/frontend/shared/assets/fonts/montserrat-thin.ttf);
+    src: url(/fonts/montserrat/montserrat-thin.ttf);
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Montserrat";
-    src: url(/frontend/shared/assets/fonts/montserrat-thin-italic.ttf);
+    src: url(/fonts/montserrat/montserrat-thin-italic.ttf);
     font-weight: 100;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Montserrat";
-    src: url(/frontend/shared/assets/fonts/montserrat-regular.ttf);
+    src: url(/fonts/montserrat/montserrat-regular.ttf);
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Montserrat";
-    src: url(/frontend/shared/assets/fonts/montserrat-regular-italic.ttf);
+    src: url(/fonts/montserrat/montserrat-regular-italic.ttf);
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Montserrat";
-    src: url(/frontend/shared/assets/fonts/montserrat-bold.ttf);
+    src: url(/fonts/montserrat/montserrat-bold.ttf);
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Montserrat";
-    src: url(/frontend/shared/assets/fonts/montserrat-bold-italic.ttf);
+    src: url(/fonts/montserrat/montserrat-bold-italic.ttf);
     font-weight: 700;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Montserrat";
-    src: url(/frontend/shared/assets/fonts/montserrat-black.ttf);
+    src: url(/fonts/montserrat/montserrat-black.ttf);
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Montserrat";
-    src: url(/frontend/shared/assets/fonts/montserrat-black-italic.ttf);
+    src: url(/fonts/montserrat/montserrat-black-italic.ttf);
     font-weight: 900;
     font-style: italic;
 }

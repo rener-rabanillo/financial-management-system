@@ -4,16 +4,16 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Log In | Budget Buddy</title>
-	<link rel="icon" type="image/x-icon" href="/frontend/shared/assets/icons/favicon.ico">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+	<link rel="stylesheet" href="/styles/website/main.css">
 </head>
 <body>
 
 	<header class="header">
 		<nav class="header__nav nav">
 			<div class="nav__brand-logo brand-logo">
-				<a class="brand-logo__link" href="index.html">
-					<img class="brand-logo__image" src="/frontend/shared/assets/images/budget-buddy-logo.png" alt="Budget Buddy Logo">
+				<a class="brand-logo__link" href="/">
+					<img class="brand-logo__image" src="/images/budget-buddy-logo.png" alt="Budget Buddy Logo">
 				</a>
 			</div>
 		</nav>
@@ -23,26 +23,46 @@
 		<section class="login">
 			<div class="login__container card--shadow">
 				<h1 class="login__heading">Log in</h1>
-				<form class="login__form form" action="" method="POST">
+				<form class="login__form form" method="POST" action="/auth/login">
+
+					<!-- Email -->
 					<div class="login__form-wrapper form__wrapper--floating-label">
-						<input class="login__form-text-box form__text-box--floating-label" id="loginEmail" name="loginEmail" type="email" placeholder="" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
-						<label class="login__form-label form__label--floating-label" for="loginEmail">Email</label>
+						<input
+							class="login__form-text-box form__text-box--floating-label"
+							id="email"
+							name="email"
+							type="email"
+							placeholder=""
+							required>
+						<label class="login__form-label form__label--floating-label" for="email">Email</label>
 					</div>
+					<span class="hidden" id="email-error"></span>
+
+					<!-- Password -->
 					<div class="login__form-wrapper form__wrapper--floating-label">
-						<input class="login__form-text-box form__text-box--floating-label" id="loginPassword" name="loginPassword" type="password" placeholder="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
-						<label class="login__form-label form__label--floating-label" for="loginPassword">Password</label>
+						<input
+							class="login__form-text-box form__text-box--floating-label"
+							id="password"
+							name="password"
+							type="password"
+							placeholder=""
+							required>
+						<label class="login__form-label form__label--floating-label" for="password">Password</label>
 					</div>
+					<span class="hidden" id="password-error"></span>
+
 					<button class="login__form-button btn btn-primary" type="submit">Log in</button>
+
 				</form>
-				<p class="login__paragraph">Don&apos;t have an account?&nbsp;<a href="signup.html" class="signup-link">Sign up</a></p>
+				<p class="login__paragraph">Don&apos;t have an account?&nbsp;<a href="/signup" class="signup-link">Sign up</a></p>
 			</div>
 		</section>
 	</main>
 
 	<footer class="footer">
 		<div class="footer__brand-logo brand-logo">
-			<a class="brand-logo__link" href="index.html">
-				<img class="brand-logo__image" src="/frontend/shared/assets/images/budget-buddy-logo.png" alt="Budget Buddy Logo">
+			<a class="brand-logo__link" href="/">
+				<img class="brand-logo__image" src="/images/budget-buddy-logo.png" alt="Budget Buddy Logo">
 			</a>
 		</div>
 		<div class="footer__contact-info contact-info">
@@ -97,6 +117,7 @@
 			<small class="copyright__text">&copy; 2025 SquadCore. All rights reserved.</small>
 		</div>
 	</footer>
-	
+
+	<script src="/scripts/website/login-form-validation.js"></script>
 </body>
 </html>
