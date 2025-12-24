@@ -4,54 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accounts</title>
-	<link rel="icon" type="image/x-icon" href="/frontend/shared/assets/icons/favicon.ico">
-    <link rel="stylesheet" href="css/main.css">
+	<link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+    <link rel="stylesheet" href="/styles/app/main.css">
 </head>
 <body>
 
     <div class="main-menu">
         <header>
             <div class="brand">
-                <img src="/frontend/shared/assets/images/budget-buddy-logo.png" alt="Budget Buddy Logo" class="brand-logo">
+                <img src="/images/budget-buddy-logo.png" alt="Budget Buddy Logo" class="brand-logo">
                 <span class="brand-name">Budget Buddy</span>
             </div>
         </header>
         <div class="wrapper">
             <nav>
-                <a href="dashboard.html" class="nav-link">
+                <a href="/" class="nav-link">
                     <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                         <!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                         <path fill="currentColor" d="M152 160C174.1 160 192 177.9 192 200L192 248C192 270.1 174.1 288 152 288L104 288C81.9 288 64 270.1 64 248L64 200C64 177.9 81.9 160 104 160L152 160zM344 288L296 288C273.9 288 256 270.1 256 248L256 200C256 177.9 273.9 160 296 160L344 160C366.1 160 384 177.9 384 200L384 248C384 270.1 366.1 288 344 288zM536 288L488 288C465.9 288 448 270.1 448 248L448 200C448 177.9 465.9 160 488 160L536 160C558.1 160 576 177.9 576 200L576 248C576 270.1 558.1 288 536 288zM536 480L488 480C465.9 480 448 462.1 448 440L448 392C448 369.9 465.9 352 488 352L536 352C558.1 352 576 369.9 576 392L576 440C576 462.1 558.1 480 536 480zM344 352C366.1 352 384 369.9 384 392L384 440C384 462.1 366.1 480 344 480L296 480C273.9 480 256 462.1 256 440L256 392C256 369.9 273.9 352 296 352L344 352zM152 480L104 480C81.9 480 64 462.1 64 440L64 392C64 369.9 81.9 352 104 352L152 352C174.1 352 192 369.9 192 392L192 440C192 462.1 174.1 480 152 480z"/>
                     </svg>
                     <span class="nav-text">Dashboard</span>
                 </a>
-                <a href="budget.html" class="nav-link">
+                <a href="/budget" class="nav-link">
                     <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                         <!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                         <path fill="currentColor" d="M320 32C373 32 416 75 416 128C416 181 373 224 320 224C267 224 224 181 224 128C224 75 267 32 320 32zM80 368C80 297.9 127 236.6 197.1 203.1C222.4 244.4 268 272 320 272C375.7 272 424.1 240.3 448 194C463.8 182.7 483.1 176 504 176L523.5 176C533.9 176 541.5 185.8 539 195.9L521.9 264.2C531.8 276.6 540.1 289.9 546.3 304L568 304C581.3 304 592 314.7 592 328L592 440C592 453.3 581.3 464 568 464L528 464C511.5 486 489.5 503.6 464 514.7L464 544C464 561.7 449.7 576 432 576L399 576C384.7 576 372.2 566.5 368.2 552.8L361.1 528L278.8 528L271.7 552.8C267.8 566.5 255.3 576 241 576L208 576C190.3 576 176 561.7 176 544L176 514.7C119.5 490 80 433.6 80 368zM456 384C469.3 384 480 373.3 480 360C480 346.7 469.3 336 456 336C442.7 336 432 346.7 432 360C432 373.3 442.7 384 456 384z"/>
                     </svg>
                     <span class="nav-text">Budget</span>
                 </a>
-                <a href="transactions.html" class="nav-link">
+                <a href="/transactions" class="nav-link">
                     <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                         <!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                         <path fill="currentColor" d="M64 192C64 156.7 92.7 128 128 128L512 128C547.3 128 576 156.7 576 192L576 448C576 483.3 547.3 512 512 512L128 512C92.7 512 64 483.3 64 448L64 192zM160 376C160 389.3 170.7 400 184 400L328 400C341.3 400 352 389.3 352 376C352 362.7 341.3 352 328 352L184 352C170.7 352 160 362.7 160 376zM184 240C170.7 240 160 250.7 160 264C160 277.3 170.7 288 184 288L456 288C469.3 288 480 277.3 480 264C480 250.7 469.3 240 456 240L184 240z"/>
                     </svg>
                     <span class="nav-text">Transactions</span>
                 </a>
-                <a href="reports.html" class="nav-link">
-                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <a href="/auth/logout" class="user-menu-link">
+                    <svg class="user-menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                         <!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                        <path fill="currentColor" d="M256 144C256 117.5 277.5 96 304 96L336 96C362.5 96 384 117.5 384 144L384 496C384 522.5 362.5 544 336 544L304 544C277.5 544 256 522.5 256 496L256 144zM64 336C64 309.5 85.5 288 112 288L144 288C170.5 288 192 309.5 192 336L192 496C192 522.5 170.5 544 144 544L112 544C85.5 544 64 522.5 64 496L64 336zM496 160L528 160C554.5 160 576 181.5 576 208L576 496C576 522.5 554.5 544 528 544L496 544C469.5 544 448 522.5 448 496L448 208C448 181.5 469.5 160 496 160z"/>
+                        <path fill="currentColor" d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z"/>
                     </svg>
-                    <span class="nav-text">Reports</span>
-                </a>
-                <a href="accounts.html" class="nav-link">
-                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                        <!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                        <path fill="currentColor" d="M335.9 84.2C326.1 78.6 314 78.6 304.1 84.2L80.1 212.2C67.5 219.4 61.3 234.2 65 248.2C68.7 262.2 81.5 272 96 272L128 272L128 480L128 480L76.8 518.4C68.7 524.4 64 533.9 64 544C64 561.7 78.3 576 96 576L544 576C561.7 576 576 561.7 576 544C576 533.9 571.3 524.4 563.2 518.4L512 480L512 272L544 272C558.5 272 571.2 262.2 574.9 248.2C578.6 234.2 572.4 219.4 559.8 212.2L335.8 84.2zM464 272L464 480L400 480L400 272L464 272zM352 272L352 480L288 480L288 272L352 272zM240 272L240 480L176 480L176 272L240 272zM320 160C337.7 160 352 174.3 352 192C352 209.7 337.7 224 320 224C302.3 224 288 209.7 288 192C288 174.3 302.3 160 320 160z"/>
-                    </svg>
-                    <span class="nav-text">Accounts</span>
+                    <span class="user-menu-text">Log Out</span>
                 </a>
             </nav>
 
@@ -146,7 +139,7 @@
     <div class="sidebar">
         <div class="wrapper">
             <div class="user-profile card card-light-transparent">
-                <img src="/frontend/website/assets/images/contributors/victorino-castro-iii.jpg" alt="" class="user-image">
+                <img src="/images/victorino-castro-iii.jpg" alt="" class="user-image">
                 <span class="user-name">Victorino Castro III</span>
                 <span class="user-email">nogcastro4@gmail.com</span>
             </div>
