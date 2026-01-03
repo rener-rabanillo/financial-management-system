@@ -14,15 +14,15 @@ export async function authenticate(email, password) {
 
         return user;
 
-    } catch (err) {
-        console.error(err);
+    } catch (error) {
+        throw error;
     }
 }
 
 export async function authorize(user) {
     try {
-        const sessionToken = generateToken();
-        const hashedToken = hashToken(sessionToken);
+        const token = generateToken();
+        const hashedToken = hashToken(token);
 
         await Session.createSession({
             hashedToken: hashedToken,
@@ -31,10 +31,10 @@ export async function authorize(user) {
             userAgent: user.userAgent
         });
 
-        return sessionToken;
+        return token;
 
-    } catch (err) {
-        console.error(err);
+    } catch (error) {
+        throw error;
     }
 }
 
@@ -46,7 +46,7 @@ export async function checkAuthorization(sessionToken) {
 
         const session = await Session.findSessionByToken(hashedToken);
         
-    } catch (err) {
-        console.error(err);
+    } catch (error) {
+        throw error;
     }
 }
