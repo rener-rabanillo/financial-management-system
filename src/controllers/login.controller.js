@@ -1,18 +1,9 @@
-import path from "node:path";
 import { checkLoginData } from "../services/form.service.js";
 import { authenticate, authorize } from "../services/auth.service.js";
 
-const __dirname = import.meta.dirname;
-
-export function serveLoginPage(req, res) {
-    res.sendFile(
-        path.join(__dirname, "..", "views", "website", "login.html")
-    );
-}
-
 export async function log(req, res) {
     const email = req.body.email.trim();
-    const password = req.body.password.trim();
+    const password = req.body.password;
     
     try {
         const isValid = checkLoginData({
@@ -22,7 +13,8 @@ export async function log(req, res) {
 
         if (!isValid) {
             return res.status(400).json({
-                error: "Form data sent incorrectly."
+                status: 400,
+                message: "Invalid format."
             });
         }
 
@@ -30,24 +22,34 @@ export async function log(req, res) {
 
         if (!user) {
             return res.status(401).json({
-                error: "Invalid email or password."
+                status: 401,
+                message: "Invalid email or password."
             });
         }
         
-        const sessionToken = await authorize({
+        const token = await authorize({
             userId: user.id,
             ipAddress: req.ip,
             userAgent: req.headers["user-agent"]
         });
 
-        res.cookie("session_token", sessionToken, {
+        res.cookie("sid", token, {
             httpOnly: true,
-            sameSite: "Strict"
+            sameSite: "Strict",
+            maxAge: 7 * 24 * 60 * 60 * 1000
         });
 
-        res.redirect("/");
+        res.status(200).json({
+            status: 200,
+            message: "Login successful."
+        });
 
-    } catch (err) {
-        console.error(err);
+    } catch (error) {
+        console.error(error);
+
+        res.status(500).json({
+            status: 500,
+            message: "An error occured in the server."
+        });
     }
 }

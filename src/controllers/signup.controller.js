@@ -1,22 +1,13 @@
-import path from "node:path";
 import { checkSignupData, checkDuplicateEmail } from "../services/form.service.js";
 import { createUser } from "../services/user.service.js";
 import { authorize } from "../services/auth.service.js";
-
-const __dirname = import.meta.dirname;
-
-export function serveSignupPage(req, res) {
-    res.sendFile(
-        path.join(__dirname, "..", "views", "website", "signup.html")
-    );
-}
 
 export async function register(req, res) {
     const firstName = req.body.firstName.trim();
     const lastName = req.body.lastName.trim();
     const email = req.body.email.trim();
-    const password = req.body.password.trim();
-    const confirmPassword = req.body.confirmPassword.trim();
+    const password = req.body.password;
+    const confirmPassword = req.body.confirmPassword;
 
     try {
         const isValid = checkSignupData({
@@ -29,14 +20,14 @@ export async function register(req, res) {
 
         if (!isValid) {
             return res.status(400).json({
-                error: "Form data sent incorrectly."
+                error: "Invalid format."
             });
         }
         
         const isFound = await checkDuplicateEmail(email);
 
         if (isFound) {
-            return res.status(400).json({
+            return res.status(409).json({
                 error: "Email already exists."
             });
         }
@@ -48,20 +39,28 @@ export async function register(req, res) {
             password: password
         });
         
-        const sessionToken = await authorize({
+        const token = await authorize({
             userId: userId,
             ipAddress: req.ip,
             userAgent: req.headers["user-agent"]
         });
 
-        res.cookie("session_token", sessionToken, {
+        res.cookie("sid", token, {
             httpOnly: true,
-            sameSite: "Strict"
+            sameSite: "Strict",
+            maxAge: 7 * 24 * 60 * 60 * 1000
         });
 
-        res.redirect("/");
+        res.status(201).json({
+            message: "Registration successful."
+        });
 
-    } catch (err) {
-        console.log(err);
+    } catch (error) {
+        console.error(error);
+
+        res.status(500).json({
+            name: error.name,
+            message: error.message
+        });
     }
 }
