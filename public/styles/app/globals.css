@@ -1,13 +1,7 @@
 /* App logo */
 
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
 .brand {
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -15,12 +9,12 @@ header {
     pointer-events: none;
 }
 
-.brand-logo {
+.brand__logo {
     width: 50px;
     margin-right: 0.5rem;
 }
 
-.brand-name {
+.brand__name {
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
     font-size: 1.2rem;
@@ -31,47 +25,7 @@ header {
 
 /* Navigation and user menu */
 
-nav, .user-menu {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.nav-link, .user-menu-link {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-}
-
-.nav-link:hover, .user-menu-link:hover {
-    background-color: var(--color-primary-300);
-}
-
-.nav-link:focus, .user-menu-link:focus {
-    background-color: var(--color-primary-100);
-}
-
-.nav-icon, .user-menu-icon {
-    width: 20px;
-    margin-right: 0.5rem;
-    color: white;
-}
-
-.nav-text, .user-menu-text {
-    color: white;
-}
-
-
-
-/* Main menu */
-
-.main-menu {
+.nav-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -80,118 +34,121 @@ nav, .user-menu {
     background-color: var(--color-primary-500);
 }
 
-.main-menu > .wrapper {
+.nav {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.nav__list {
     width: 100%;
     padding: 0 1rem;
-    margin-top: 82px;
 }
 
-
-
-/* Main content */
-
-main {
-    margin-left: 280px;
-    margin-right: 360px;
-}
-
-.heading {
-    width: 100%;
-    height: 80px;
+.nav__link {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: var(--color-primary-900);
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
 }
 
-.heading > h1 {
-    font-weight: 700;
-    font-size: 1.5rem;
-    padding-left: 2rem;
+.nav__link:hover {
+    background-color: var(--color-primary-300);
+}
+
+.nav__link:focus {
+    background-color: var(--color-primary-100);
+}
+
+.nav__icon {
+    width: 20px;
+    margin-right: 1rem;
+    color: white;
+}
+
+.nav__text {
     color: white;
 }
 
 
 
-/* Floating buttons */
+/* Header */
 
-#addCategoryGroupButton, #addTransactionButton, #addAccountButton {
+.header {
+    height: 82px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    margin-left: 280px;
+}
+
+.header__heading {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.header__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25rem 1rem;
+    border-radius: 10px;
+    background-color: var(--color-gray--light);
+}
+
+.header__search {
+    width: 20rem;
+    box-shadow: none;
+    border: none;
+    font-size: inherit;
+    background-color: inherit;
+}
+
+.header__search::-webkit-search-cancel-button {
+    appearance: none;
+    display: none;
+}
+
+.header__search-icon {
+    width: 20px;
+    color: var(--color-gray--neutral);
+}
+
+.header__notif-icon {
+    width: 35px;
+    justify-self: flex-end;
+}
+
+.header__profile-image {
+    width: 40px;
+    justify-self: flex-end;
+    border-radius: 999px;
+}
+
+
+
+/* Main */
+
+main {
+    margin-left: 280px;
+}
+
+
+
+.add-button {
+    width: 50px;
     position: fixed;
     bottom: 2rem;
-    right: calc(2rem + 360px);
-    width: 50px;
-}
-
-
-
-/* User profile */
-
-.user-profile {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    margin-bottom: 2.5rem;
-}
-
-.user-image {
-    width: 100px;
-    border-radius: 999px;
-    margin-bottom: 1rem;
-}
-
-.user-name, .sidebar .amount {
-    font-weight: 900;
-    font-size: 1.2rem;
-}
-
-.user-email, .sidebar .label {
-    font-weight: 400;
-    font-size: 0.75rem;
-}
-
-
-
-/* Stats */
-
-.total-balance, .amount-budgeted, .amount-spent, .amount-available {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-
-
-/* Sidebar */
-
-.sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 360px;
-    height: 100vh;
-    background-color: var(--color-tertiary-300);
-}
-
-.sidebar > .wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 2.5rem;
-    overflow-y: auto;
-}
-
-.sidebar > .wrapper::-webkit-scrollbar {
-    display: none;
+    right: 2rem;
 }
 
 

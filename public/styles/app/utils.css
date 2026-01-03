@@ -158,11 +158,3 @@
 .card-light-transparent {
     background-color: rgba(255, 255, 255, 0.35);
 }
-
-
-
-/* Dividers */
-
-.divider {
-    padding: 1rem 0;
-}
