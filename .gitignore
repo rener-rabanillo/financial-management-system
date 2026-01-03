@@ -1,4 +1,4 @@
-# Dependency directories
+# Dependency directory
 node_modules/
 
 # Environment variable files
@@ -8,3 +8,6 @@ node_modules/
 
 # VS Code workspace config directory
 .vscode/
+
+# User-uploaded file directory
+uploads/
