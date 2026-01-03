@@ -3,6 +3,4 @@ import * as transactionsController from "../controllers/transactions.controller.
 
 const router = express.Router();
 
-router.get("/", transactionsController.serveTransactionsPage);
-
 export default router;
