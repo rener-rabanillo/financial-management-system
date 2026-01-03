@@ -7,8 +7,9 @@ export default class Session {
                 "CALL `create_session` (?, ?, ?, ?)",
                 [session.hashedToken, session.userId, session.ipAddress, session.userAgent]
             );
-        } catch (err) {
-            console.error(err);
+
+        } catch (error) {
+            throw error;
         }
     }
 
@@ -18,9 +19,11 @@ export default class Session {
                 "SELECT * FROM `session` WHERE `token_hash` = ? LIMIT 1",
                 [hashedToken]
             );
+
             return result[0];
-        } catch (err) {
-            console.error(err);
+
+        } catch (error) {
+            throw error;
         }
     }
 }
