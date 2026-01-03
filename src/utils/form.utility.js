@@ -1,3 +1,7 @@
+export function checkTextLength(text) {
+    return text.length <= 50;
+}
+
 export function checkName(name) {
     return (
         /^[A-Za-z ]+$/
