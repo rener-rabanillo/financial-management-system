@@ -39,13 +39,9 @@ export async function register(req, res) {
             password: password
         });
         
-        const token = await authorize({
-            userId: userId,
-            ipAddress: req.ip,
-            userAgent: req.headers["user-agent"]
-        });
+        const token = await authorize(userId);
 
-        res.cookie("sid", token, {
+        res.cookie("rt", token, {
             httpOnly: true,
             sameSite: "Strict",
             maxAge: 7 * 24 * 60 * 60 * 1000

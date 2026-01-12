@@ -1,3 +1,21 @@
-import path from "node:path";
 
-const __dirname = import.meta.dirname;
+
+export function getAll(req, res) {
+
+}
+
+export function getExisting(req, res) {
+
+}
+
+export function create(req, res) {
+    
+}
+
+export function modify(req, res) {
+    
+}
+
+export function remove(req, res) {
+    
+}

@@ -54,8 +54,20 @@ export function serveTransactionsPage(req, res) {
     );
 }
 
+export function serveGoalsPage(req, res) {
+    res.sendFile(
+        path.join(__dirname, "..", "views", "app", "goals.html")
+    );
+}
+
 export function serveAccountsPage(req, res) {
     res.sendFile(
         path.join(__dirname, "..", "views", "app", "accounts.html")
+    );
+}
+
+export function serveResultsPage(req, res) {
+    res.sendFile(
+        path.join(__dirname, "..", "views", "app", "results.html")
     );
 }

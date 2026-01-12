@@ -27,13 +27,9 @@ export async function log(req, res) {
             });
         }
         
-        const token = await authorize({
-            userId: user.id,
-            ipAddress: req.ip,
-            userAgent: req.headers["user-agent"]
-        });
+        const token = await authorize(user.id);
 
-        res.cookie("sid", token, {
+        res.cookie("rt", token, {
             httpOnly: true,
             sameSite: "Strict",
             maxAge: 7 * 24 * 60 * 60 * 1000
