@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transactions</title>
+    <title>Results</title>
 	<link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
     <link rel="stylesheet" href="/styles/app/main.css">
 </head>
@@ -88,104 +88,13 @@
 
     <main class="main">
         <div class="main__container">
-            <div class="main__header transactions__header">
-                <h1 class="main__heading">Transactions</h1>
-                <div class="transactions__filter">
-                    <div class="transactions__filter-year">
-                        <select id="year">
-                            <option selected disabled hidden>Year</option>
-                        </select>
-                    </div>
-                    <div class="transactions__filter-month">
-                        <select id="month">
-                            <option selected disabled hidden>Month</option>
-                        </select>
-                    </div>
-                    <div class="transactions__filter-account">
-                        <select id="account">
-                            <option selected disabled hidden>Account</option>
-                        </select>
-                    </div>
-                    <div class="transactions__filter-category">
-                        <select id="category">
-                            <option selected disabled hidden>Category</option>
-                        </select>
-                    </div>
-                </div>
+            <div class="main__header">
+                <h1 class="main__heading">Results</h1>
             </div>
-            <div class="transactions__table-container" id="transactions"></div>
+            <div class="results__container" id="results"></div>
         </div>
     </main>
 
-    <div class="add-button-container" id="add-transaction-container">
-        <button class="add-button btn btn-round-green" id="add-transaction">
-            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                <!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                <path fill="currentColor" d="M352 128C352 110.3 337.7 96 320 96C302.3 96 288 110.3 288 128L288 288L128 288C110.3 288 96 302.3 96 320C96 337.7 110.3 352 128 352L288 352L288 512C288 529.7 302.3 544 320 544C337.7 544 352 529.7 352 512L352 352L512 352C529.7 352 544 337.7 544 320C544 302.3 529.7 288 512 288L352 288L352 128z"/>
-            </svg>
-        </button>
-    </div>
-
-    <div id="addTransactionForm">
-        <div class="background">
-            <div class="container card card-white">
-                <h1>New Transaction</h1>
-                <form action="" method="POST">
-                    <div class="grid">
-                        <div id="date">
-                            <label for="date-input">Date</label>
-                            <input type="date" id="date-input" required>
-                        </div>
-                        <div id="account">
-                            <label for="account-selection">Account</label>
-                            <select id="account-selection" required>
-                                <option value="" selected>Select an account</option>
-                                <option value="Wallet">Cash</option>
-                                <option value="GCash">GCash</option>
-                                <option value="BPI">Landbank</option>
-                            </select>
-                        </div>
-                        <div id="category">
-                            <label for="category-selection">Category</label>
-                            <select id="category-selection" required>
-                                <option value="" selected>Select a category</option>
-                                <optgroup label="Needs">
-                                    <option value="Food">Food</option>
-                                    <option value="Electricity">Electricity</option>
-                                    <option value="Water">Water</option>
-                                </optgroup>
-                                <optgroup label="Wants">
-                                    <option value="Dining">Dining out</option>
-                                    <option value="Gadgets">Gadgets</option>
-                                    <option value="Netflix">Netflix subscription</option>
-                                </optgroup>
-                                <optgroup label="Savings">
-                                    <option value="Emergency">Emergency fund</option>
-                                    <option value="Investment">Investment</option>
-                                </optgroup>
-                            </select>
-                        </div>
-                        <div id="note">
-                            <label for="note-input">Note</label>
-                            <input type="text" id="note-input">
-                        </div>
-                        <div id="amount">
-                            <label for="amount-input">Amount</label>
-                            <input type="number" id="amount-input" required>
-                        </div>
-                        <button type="submit" id="addButton" class="btn btn-smooth-edge-green">
-                            <span class="btn-text">Add</span>
-                        </button>
-                        <button type="button" id="cancelButton" class="btn btn-smooth-edge-red">
-                            <span class="btn-text">Cancel</span>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <script src="/scripts/app/transactions.js"></script>
-    <script src="/scripts/app/tooltip.js" type="module"></script>
+    <script src="/scripts/app/tooltip.js"></script>
 </body>
 </html>

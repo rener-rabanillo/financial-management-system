@@ -9,142 +9,146 @@
 </head>
 <body>
 
-    <div class="nav-container">
-        <nav class="nav">
-            <div class="brand">
-                <img class="brand__logo" src="/images/budget-buddy-logo.png" alt="Budget Buddy Logo">
-                <span class="brand__name">Budget Buddy</span>
-            </div>
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="/" class="nav__link">
-                        <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                            <!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                            <path fill="currentColor" d="M152 160C174.1 160 192 177.9 192 200L192 248C192 270.1 174.1 288 152 288L104 288C81.9 288 64 270.1 64 248L64 200C64 177.9 81.9 160 104 160L152 160zM344 288L296 288C273.9 288 256 270.1 256 248L256 200C256 177.9 273.9 160 296 160L344 160C366.1 160 384 177.9 384 200L384 248C384 270.1 366.1 288 344 288zM536 288L488 288C465.9 288 448 270.1 448 248L448 200C448 177.9 465.9 160 488 160L536 160C558.1 160 576 177.9 576 200L576 248C576 270.1 558.1 288 536 288zM536 480L488 480C465.9 480 448 462.1 448 440L448 392C448 369.9 465.9 352 488 352L536 352C558.1 352 576 369.9 576 392L576 440C576 462.1 558.1 480 536 480zM344 352C366.1 352 384 369.9 384 392L384 440C384 462.1 366.1 480 344 480L296 480C273.9 480 256 462.1 256 440L256 392C256 369.9 273.9 352 296 352L344 352zM152 480L104 480C81.9 480 64 462.1 64 440L64 392C64 369.9 81.9 352 104 352L152 352C174.1 352 192 369.9 192 392L192 440C192 462.1 174.1 480 152 480z"/>
-                        </svg>
-                        <span class="nav__text">Dashboard</span>
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="/budgets" class="nav__link">
-                        <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                            <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-                            <path fill="currentColor" d="M544.4 304L368.4 304C350.7 304 336.4 289.7 336.4 272L336.4 96C336.4 78.3 350.8 63.8 368.3 66.1C475.3 80.3 560.1 165.1 574.3 272.1C576.6 289.6 562.1 304 544.4 304zM254.6 101.2C272.7 97.4 288.4 112.2 288.4 130.7L288.4 328C288.4 333.6 290.4 339 293.9 343.3L426 502.7C437.7 516.8 435.2 538.1 419.1 546.8C385 565.4 345.9 576 304.4 576C171.9 576 64.4 468.5 64.4 336C64.4 220.5 145.9 124.1 254.6 101.2zM509.8 352L573.8 352C592.3 352 607.1 367.7 603.3 385.8C593.1 434.2 568.3 477.2 533.7 510C521.4 521.7 502.1 519.2 491.3 506.1L406.9 404.4C389.6 383.5 404.5 352 431.5 352L509.7 352z"/>
-                        </svg>
-                        <span class="nav__text">Budgets</span>
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="/transactions" class="nav__link">
-                        <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                            <!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                            <path fill="currentColor" d="M64 192C64 156.7 92.7 128 128 128L512 128C547.3 128 576 156.7 576 192L576 448C576 483.3 547.3 512 512 512L128 512C92.7 512 64 483.3 64 448L64 192zM160 376C160 389.3 170.7 400 184 400L328 400C341.3 400 352 389.3 352 376C352 362.7 341.3 352 328 352L184 352C170.7 352 160 362.7 160 376zM184 240C170.7 240 160 250.7 160 264C160 277.3 170.7 288 184 288L456 288C469.3 288 480 277.3 480 264C480 250.7 469.3 240 456 240L184 240z"/>
-                        </svg>
-                        <span class="nav__text">Transactions</span>
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="/goals" class="nav__link">
-                        <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                            <!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                            <path fill="currentColor" d="M320 32C373 32 416 75 416 128C416 181 373 224 320 224C267 224 224 181 224 128C224 75 267 32 320 32zM80 368C80 297.9 127 236.6 197.1 203.1C222.4 244.4 268 272 320 272C375.7 272 424.1 240.3 448 194C463.8 182.7 483.1 176 504 176L523.5 176C533.9 176 541.5 185.8 539 195.9L521.9 264.2C531.8 276.6 540.1 289.9 546.3 304L568 304C581.3 304 592 314.7 592 328L592 440C592 453.3 581.3 464 568 464L528 464C511.5 486 489.5 503.6 464 514.7L464 544C464 561.7 449.7 576 432 576L399 576C384.7 576 372.2 566.5 368.2 552.8L361.1 528L278.8 528L271.7 552.8C267.8 566.5 255.3 576 241 576L208 576C190.3 576 176 561.7 176 544L176 514.7C119.5 490 80 433.6 80 368zM456 384C469.3 384 480 373.3 480 360C480 346.7 469.3 336 456 336C442.7 336 432 346.7 432 360C432 373.3 442.7 384 456 384z"/>
-                        </svg>
-                        <span class="nav__text">Goals</span>
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="/accounts" class="nav__link">
-                        <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                            <!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                            <path fill="currentColor" d="M335.9 84.2C326.1 78.6 314 78.6 304.1 84.2L80.1 212.2C67.5 219.4 61.3 234.2 65 248.2C68.7 262.2 81.5 272 96 272L128 272L128 480L128 480L76.8 518.4C68.7 524.4 64 533.9 64 544C64 561.7 78.3 576 96 576L544 576C561.7 576 576 561.7 576 544C576 533.9 571.3 524.4 563.2 518.4L512 480L512 272L544 272C558.5 272 571.2 262.2 574.9 248.2C578.6 234.2 572.4 219.4 559.8 212.2L335.8 84.2zM464 272L464 480L400 480L400 272L464 272zM352 272L352 480L288 480L288 272L352 272zM240 272L240 480L176 480L176 272L240 272zM320 160C337.7 160 352 174.3 352 192C352 209.7 337.7 224 320 224C302.3 224 288 209.7 288 192C288 174.3 302.3 160 320 160z"/>
-                        </svg>
-                        <span class="nav__text">Accounts</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
     <header class="header">
-        <form class="header__form" method="GET" action="/search">
-            <label class="header__search-label" for="search">
-                <svg class="header__search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                    <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-                    <path fill="currentColor" d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z"/>
-                </svg>
-            </label>
-            <input class="header__search" id="search" name="query" type="search" placeholder="Search">
-        </form>
-        <div class="header__notif">
-            <svg class="header__notif-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-                <path fill="currentColor" d="M320 64C306.7 64 296 74.7 296 88L296 97.7C214.6 109.3 152 179.4 152 264L152 278.5C152 316.2 142 353.2 123 385.8L101.1 423.2C97.8 429 96 435.5 96 442.2C96 463.1 112.9 480 133.8 480L506.2 480C527.1 480 544 463.1 544 442.2C544 435.5 542.2 428.9 538.9 423.2L517 385.7C498 353.1 488 316.1 488 278.4L488 263.9C488 179.3 425.4 109.2 344 97.6L344 87.9C344 74.6 333.3 63.9 320 63.9zM488.4 432L151.5 432L164.4 409.9C187.7 370 200 324.6 200 278.5L200 264C200 197.7 253.7 144 320 144C386.3 144 440 197.7 440 264L440 278.5C440 324.7 452.3 370 475.5 409.9L488.4 432zM252.1 528C262 556 288.7 576 320 576C351.3 576 378 556 387.9 528L252.1 528z"/>
-            </svg>
+        <div class="brand">
+            <img class="brand__logo" src="/images/budget-buddy-logo.png" alt="Budget Buddy Logo">
+            <span class="brand__name">Budget Buddy</span>
         </div>
-        <div class="header__profile">
-            <img class="header__profile-image" src="/images/default.png">
+        <div class="header__interactables">
+            <form class="header__form" id="search-form" method="GET" action="/search">
+                <label class="header__search-label" for="search">
+                    <svg class="header__search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                        <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path fill="currentColor" d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z"/>
+                    </svg>
+                </label>
+                <input class="header__search" id="search" name="query" type="search" placeholder="Search">
+            </form>
+            <button class="header__notif" id="notification">
+                <svg class="header__notif-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                    <path fill="currentColor" d="M320 64C306.7 64 296 74.7 296 88L296 97.7C214.6 109.3 152 179.4 152 264L152 278.5C152 316.2 142 353.2 123 385.8L101.1 423.2C97.8 429 96 435.5 96 442.2C96 463.1 112.9 480 133.8 480L506.2 480C527.1 480 544 463.1 544 442.2C544 435.5 542.2 428.9 538.9 423.2L517 385.7C498 353.1 488 316.1 488 278.4L488 263.9C488 179.3 425.4 109.2 344 97.6L344 87.9C344 74.6 333.3 63.9 320 63.9zM488.4 432L151.5 432L164.4 409.9C187.7 370 200 324.6 200 278.5L200 264C200 197.7 253.7 144 320 144C386.3 144 440 197.7 440 264L440 278.5C440 324.7 452.3 370 475.5 409.9L488.4 432zM252.1 528C262 556 288.7 576 320 576C351.3 576 378 556 387.9 528L252.1 528z"/>
+                </svg>
+            </button>
+            <button class="header__profile" id="profile">
+                <img class="header__profile-image" src="/images/default.png">
+            </button>
         </div>
     </header>
 
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a href="/" class="nav__link">
+                    <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                        <!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                        <path fill="currentColor" d="M152 160C174.1 160 192 177.9 192 200L192 248C192 270.1 174.1 288 152 288L104 288C81.9 288 64 270.1 64 248L64 200C64 177.9 81.9 160 104 160L152 160zM344 288L296 288C273.9 288 256 270.1 256 248L256 200C256 177.9 273.9 160 296 160L344 160C366.1 160 384 177.9 384 200L384 248C384 270.1 366.1 288 344 288zM536 288L488 288C465.9 288 448 270.1 448 248L448 200C448 177.9 465.9 160 488 160L536 160C558.1 160 576 177.9 576 200L576 248C576 270.1 558.1 288 536 288zM536 480L488 480C465.9 480 448 462.1 448 440L448 392C448 369.9 465.9 352 488 352L536 352C558.1 352 576 369.9 576 392L576 440C576 462.1 558.1 480 536 480zM344 352C366.1 352 384 369.9 384 392L384 440C384 462.1 366.1 480 344 480L296 480C273.9 480 256 462.1 256 440L256 392C256 369.9 273.9 352 296 352L344 352zM152 480L104 480C81.9 480 64 462.1 64 440L64 392C64 369.9 81.9 352 104 352L152 352C174.1 352 192 369.9 192 392L192 440C192 462.1 174.1 480 152 480z"/>
+                    </svg>
+                    <span class="nav__text">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="/budgets" class="nav__link">
+                    <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                        <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                        <path fill="currentColor" d="M544.4 304L368.4 304C350.7 304 336.4 289.7 336.4 272L336.4 96C336.4 78.3 350.8 63.8 368.3 66.1C475.3 80.3 560.1 165.1 574.3 272.1C576.6 289.6 562.1 304 544.4 304zM254.6 101.2C272.7 97.4 288.4 112.2 288.4 130.7L288.4 328C288.4 333.6 290.4 339 293.9 343.3L426 502.7C437.7 516.8 435.2 538.1 419.1 546.8C385 565.4 345.9 576 304.4 576C171.9 576 64.4 468.5 64.4 336C64.4 220.5 145.9 124.1 254.6 101.2zM509.8 352L573.8 352C592.3 352 607.1 367.7 603.3 385.8C593.1 434.2 568.3 477.2 533.7 510C521.4 521.7 502.1 519.2 491.3 506.1L406.9 404.4C389.6 383.5 404.5 352 431.5 352L509.7 352z"/>
+                    </svg>
+                    <span class="nav__text">Budgets</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="/transactions" class="nav__link">
+                    <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                        <!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                        <path fill="currentColor" d="M64 192C64 156.7 92.7 128 128 128L512 128C547.3 128 576 156.7 576 192L576 448C576 483.3 547.3 512 512 512L128 512C92.7 512 64 483.3 64 448L64 192zM160 376C160 389.3 170.7 400 184 400L328 400C341.3 400 352 389.3 352 376C352 362.7 341.3 352 328 352L184 352C170.7 352 160 362.7 160 376zM184 240C170.7 240 160 250.7 160 264C160 277.3 170.7 288 184 288L456 288C469.3 288 480 277.3 480 264C480 250.7 469.3 240 456 240L184 240z"/>
+                    </svg>
+                    <span class="nav__text">Transactions</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="/goals" class="nav__link">
+                    <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                        <!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                        <path fill="currentColor" d="M320 32C373 32 416 75 416 128C416 181 373 224 320 224C267 224 224 181 224 128C224 75 267 32 320 32zM80 368C80 297.9 127 236.6 197.1 203.1C222.4 244.4 268 272 320 272C375.7 272 424.1 240.3 448 194C463.8 182.7 483.1 176 504 176L523.5 176C533.9 176 541.5 185.8 539 195.9L521.9 264.2C531.8 276.6 540.1 289.9 546.3 304L568 304C581.3 304 592 314.7 592 328L592 440C592 453.3 581.3 464 568 464L528 464C511.5 486 489.5 503.6 464 514.7L464 544C464 561.7 449.7 576 432 576L399 576C384.7 576 372.2 566.5 368.2 552.8L361.1 528L278.8 528L271.7 552.8C267.8 566.5 255.3 576 241 576L208 576C190.3 576 176 561.7 176 544L176 514.7C119.5 490 80 433.6 80 368zM456 384C469.3 384 480 373.3 480 360C480 346.7 469.3 336 456 336C442.7 336 432 346.7 432 360C432 373.3 442.7 384 456 384z"/>
+                    </svg>
+                    <span class="nav__text">Goals</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="/accounts" class="nav__link">
+                    <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                        <!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                        <path fill="currentColor" d="M335.9 84.2C326.1 78.6 314 78.6 304.1 84.2L80.1 212.2C67.5 219.4 61.3 234.2 65 248.2C68.7 262.2 81.5 272 96 272L128 272L128 480L128 480L76.8 518.4C68.7 524.4 64 533.9 64 544C64 561.7 78.3 576 96 576L544 576C561.7 576 576 561.7 576 544C576 533.9 571.3 524.4 563.2 518.4L512 480L512 272L544 272C558.5 272 571.2 262.2 574.9 248.2C578.6 234.2 572.4 219.4 559.8 212.2L335.8 84.2zM464 272L464 480L400 480L400 272L464 272zM352 272L352 480L288 480L288 272L352 272zM240 272L240 480L176 480L176 272L240 272zM320 160C337.7 160 352 174.3 352 192C352 209.7 337.7 224 320 224C302.3 224 288 209.7 288 192C288 174.3 302.3 160 320 160z"/>
+                    </svg>
+                    <span class="nav__text">Accounts</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
     <main>
-        <section class="heading">
-            <h1>Accounts</h1>
-        </section>
-
-        <section id="accounts-main-content">
-            <div class="container card card-yellow">
-                <span class="account-name">Cash</span>
-                <span class="account-name-label">Account name</span>
-                <span class="balance-label">Available balance</span>
-                <span class="balance">&#8369; 5,000.00</span>
+        <div class="main__container">
+            <div class="main__header">
+                <h1 class="main__heading">Accounts</h1>
             </div>
-            <div class="container card card-yellow">
-                <span class="account-name">GCash</span>
-                <span class="account-name-label">Account name</span>
-                <span class="balance-label">Available balance</span>
-                <span class="balance">&#8369; 25,000.00</span>
-            </div>
-            <div class="container card card-yellow">
-                <span class="account-name">Landbank</span>
-                <span class="account-name-label">Account name</span>
-                <span class="balance-label">Available balance</span>
-                <span class="balance">&#8369; 435,000.00</span>
-            </div>
-        </section>
-
-        <button id="addAccountButton" class="add-button btn btn-round-green">
-            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                <!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                <path fill="currentColor" d="M352 128C352 110.3 337.7 96 320 96C302.3 96 288 110.3 288 128L288 288L128 288C110.3 288 96 302.3 96 320C96 337.7 110.3 352 128 352L288 352L288 512C288 529.7 302.3 544 320 544C337.7 544 352 529.7 352 512L352 352L512 352C529.7 352 544 337.7 544 320C544 302.3 529.7 288 512 288L352 288L352 128z"/>
-            </svg>
-        </button>
-
-        <div id="addAccountForm">
-            <div class="background">
-                <div class="container card card-white">
-                    <h1>New Account</h1>
-                    <form action="" method="POST">
-                        <div class="grid">
-                            <div id="account">
-                                <label for="account-input">Account name</label>
-                                <input type="text" id="account-input" required>
-                            </div>
-                            <div id="balance">
-                                <label for="balance-input">Balance</label>
-                                <input type="number" id="balance-input" required>
-                            </div>
-                            <button type="submit" id="addButton" class="btn btn-smooth-edge-green">
-                                <span class="btn-text">Add</span>
-                            </button>
-                            <button type="button" id="cancelButton" class="btn btn-smooth-edge-red">
-                                <span class="btn-text">Cancel</span>
-                            </button>
-                        </div>
-                    </form>
+            <div class="accounts__container" id="accounts">
+                <div class="container card card-yellow">
+                    <span class="account-name">Cash</span>
+                    <span class="account-name-label">Account name</span>
+                    <span class="balance-label">Available balance</span>
+                    <span class="balance">&#8369; 5,000.00</span>
+                </div>
+                <div class="container card card-yellow">
+                    <span class="account-name">GCash</span>
+                    <span class="account-name-label">Account name</span>
+                    <span class="balance-label">Available balance</span>
+                    <span class="balance">&#8369; 25,000.00</span>
+                </div>
+                <div class="container card card-yellow">
+                    <span class="account-name">Landbank</span>
+                    <span class="account-name-label">Account name</span>
+                    <span class="balance-label">Available balance</span>
+                    <span class="balance">&#8369; 435,000.00</span>
                 </div>
             </div>
         </div>
     </main>
 
+    <div class="add-button-container" id="add-account-container">
+        <button class="add-button btn btn-round-green" id="add-account">
+            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                <path fill="currentColor" d="M352 128C352 110.3 337.7 96 320 96C302.3 96 288 110.3 288 128L288 288L128 288C110.3 288 96 302.3 96 320C96 337.7 110.3 352 128 352L288 352L288 512C288 529.7 302.3 544 320 544C337.7 544 352 529.7 352 512L352 352L512 352C529.7 352 544 337.7 544 320C544 302.3 529.7 288 512 288L352 288L352 128z"/>
+            </svg>
+        </button>
+    </div>
+
+    <div id="addAccountForm">
+        <div class="background">
+            <div class="container card card-white">
+                <h1>New Account</h1>
+                <form action="" method="POST">
+                    <div class="grid">
+                        <div id="account">
+                            <label for="account-input">Account name</label>
+                            <input type="text" id="account-input" required>
+                        </div>
+                        <div id="balance">
+                            <label for="balance-input">Balance</label>
+                            <input type="number" id="balance-input" required>
+                        </div>
+                        <button type="submit" id="addButton" class="btn btn-smooth-edge-green">
+                            <span class="btn-text">Add</span>
+                        </button>
+                        <button type="button" id="cancelButton" class="btn btn-smooth-edge-red">
+                            <span class="btn-text">Cancel</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/scripts/app/tooltip.js" type="module"></script>
 </body>
 </html>
