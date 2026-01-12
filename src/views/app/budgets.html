@@ -173,29 +173,33 @@
         </div>
     </div>
 
-    <div id="setBudgetForm">
-        <div class="background">
-            <div class="container card card-white">
-                <h1>Set Budget</h1>
-                <form action="" method="POST">
-                    <div class="grid">
-                        <div id="amount">
-                            <label for="amount-input">Amount</label>
-                            <input type="number" id="amount-input" required>
+        <div id="setBudgetForm">
+            <div class="background">
+                <div class="container card card-white">
+                    <h1>Set Budget</h1>
+                    <form action="" method="POST">
+                        <div class="grid">
+                            <div id="amount">
+                                <label for="amount-input">Amount</label>
+                                <input type="number" id="amount-input" required>
+                            </div>
+                            <button type="submit" id="setButton" class="btn btn-smooth-edge-green">
+                                <span class="btn-text">Set</span>
+                            </button>
+                            <button type="button" id="cancel" class="btn btn-smooth-edge-red">
+                                <span class="btn-text">Cancel</span>
+                            </button>
                         </div>
-                        <button type="submit" id="setButton" class="btn btn-smooth-edge-green">
-                            <span class="btn-text">Set</span>
-                        </button>
-                        <button type="button" id="cancel" class="btn btn-smooth-edge-red">
-                            <span class="btn-text">Cancel</span>
-                        </button>
-                    </div>
-                </form> 
+                    </form> 
+                </div>
             </div>
         </div>
-    </div>
+    </main>
 
+    <script src="/scripts/app/auth.js"></script>
+    <script src="/scripts/app/budget.js"></script>
     <script src="/scripts/app/budgets.js" type="module"></script>
     <script src="/scripts/app/tooltip.js" type="module"></script>
+
 </body>
 </html>
