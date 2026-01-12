@@ -3,4 +3,14 @@ import * as transactionsController from "../controllers/transactions.controller.
 
 const router = express.Router();
 
+router.get("/", transactionsController.getAll);
+
+router.get("/:id", transactionsController.getExisting);
+
+router.post("/", transactionsController.create);
+
+router.put("/", transactionsController.modify);
+
+router.delete("/", transactionsController.remove);
+
 export default router;
