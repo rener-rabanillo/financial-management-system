@@ -4,8 +4,8 @@ export default class Session {
     static async createSession(session) {
         try {
             await pool.execute(
-                "CALL `create_session` (?, ?, ?, ?)",
-                [session.hashedToken, session.userId, session.ipAddress, session.userAgent]
+                "CALL `create_session` (?, ?, ?)",
+                [session.userId, session.hashedToken]
             );
 
         } catch (error) {

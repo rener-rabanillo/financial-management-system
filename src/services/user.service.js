@@ -16,7 +16,7 @@ export async function createUser(user) {
 
         return id;
 
-    } catch (err) {
-        console.error(err);
+    } catch (error) {
+        throw error;
     }
 }

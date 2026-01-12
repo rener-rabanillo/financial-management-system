@@ -19,16 +19,14 @@ export async function authenticate(email, password) {
     }
 }
 
-export async function authorize(user) {
+export async function authorize(userId) {
     try {
         const token = generateToken();
         const hashedToken = hashToken(token);
 
         await Session.createSession({
-            hashedToken: hashedToken,
-            userId: user.userId,
-            ipAddress: user.ipAddress,
-            userAgent: user.userAgent
+            userId: userId,
+            hashedToken: hashedToken
         });
 
         return token;
