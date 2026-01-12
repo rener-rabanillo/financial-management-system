@@ -1,8 +1,35 @@
+/* Containers and wrappers */
+
+.container {
+    width: 100%;
+    
+}
+
+.wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+
+
 /* Brand logo */
 
-.brand-logo__image {
-    width: 80px;
-    margin: 10px;
+.brand__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.brand__image {
+    width: 45px;
+}
+
+.brand__name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 1.25rem;
+    color: var(--color-primary-500);
 }
 
 
@@ -12,15 +39,19 @@
 .header {
     position: sticky;
     top: 0;
-    z-index: 1000;
-    width: 100%;
-    background-color: white;
+    z-index: 10;
+    padding: 2rem;
 }
 
 .nav {
+    max-width: 1024px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 1rem 1.2rem;
+    border-radius: 999px;
+    box-shadow: 0 0 10px 1px var(--color-dim-300);
+    background-color: white;
 }
 
 .nav__list,
@@ -31,10 +62,14 @@
     gap: 1rem;
 }
 
+.nav__auth-btn-item {
+    border-radius: 999px;
+}
+
 .nav__link {
     display: block;
     position: relative;
-    padding: 1rem;
+    padding: 0.75rem;
     overflow: hidden;
 }
 
@@ -62,11 +97,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5rem;
+    padding: 5rem 0;
     background-color: var(--color-primary-500);
 }
 
-.newsletter__wrapper {
+.newsletter__layout {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -122,17 +157,23 @@
 /* Footer section */
 
 .footer {
-    display: grid;
-    grid-template: 1fr 0.5fr / 1fr 1fr 1fr;
-    padding: 2rem;
+    padding: 2rem 0;
     background-color: var(--color-primary-900);
 }
 
-.footer__brand-logo {
+.footer__layout {
+    display: grid;
+    grid-template: 1fr 0.5fr / 1fr 1fr 1fr;
+}
+
+.footer__brand {
     grid-area: 1 / 1 / span 1 / span 1;
     justify-self: center;
     align-self: center;
-    padding: 1rem;
+}
+
+.footer__brand-image {
+    width: 50px;
 }
 
 .footer__contact-info {

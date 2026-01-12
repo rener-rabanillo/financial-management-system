@@ -3,7 +3,6 @@
 @import url(/styles/app/utils.css);
 @import url(/styles/app/globals.css);
 @import url(/styles/app/pages/dashboard.css);
-@import url(/styles/app/pages/budget.css);
+@import url(/styles/app/pages/budgets.css);
 @import url(/styles/app/pages/transactions.css);
-@import url(/styles/app/pages/reports.css);
 @import url(/styles/app/pages/accounts.css);

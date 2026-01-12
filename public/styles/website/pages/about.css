@@ -2,28 +2,37 @@
 
 .about,
 .comp-desc {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5rem;
+}
+
+.about__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+.comp-desc__wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
 }
 
 .about__wrapper,
 .comp-desc__wrapper {
-    position: relative;
-    width: 80%;
+    padding: 4rem 2rem 6rem;
 }
 
 .about__image-container,
 .comp-desc__image-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 35rem;
-    height: 35rem;
-    border-radius: 999px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    width: 30rem;
+    height: 30rem;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px var(--color-secondary-500);
     background-color: white;
     overflow: hidden;
 }
@@ -38,15 +47,16 @@
 }
 
 .about__image {
-    width: 40rem;
+    width: 50rem;
 }
 
 .comp-desc__image {
-    width: 32rem;
+    width: 30rem;
 }
 
 .about__details,
 .comp-desc__details {
+    width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,26 +64,17 @@
     gap: 1rem;
 }
 
-.about__details {
-    padding: 5rem 5rem 5rem 24rem;
-}
-
-.comp-desc__details {
-    padding: 5rem 24rem 5rem 5rem;
-}
-
 .about__heading,
 .comp-desc__heading {
     font-weight: 700;
     font-size: 1.5rem;
-    color: white;
+    color: var(--color-gray-900);
 }
 
 .about__paragraph,
 .comp-desc__paragraph {
     font-weight: 400;
-    text-wrap: balance;
-    color: white;
+    color: var(--color-gray-900);
 }
 
 
@@ -81,12 +82,15 @@
 /* Contributors section */
 
 .contributor {
+    background-color: var(--color-tertiary-100);
+}
+
+.contributor__layout {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5rem;
-    background-color: var(--color-tertiary-100);
+    padding: 5rem 0;
 }
 
 .contributor__heading {
@@ -110,7 +114,7 @@
 }
 
 .contributor__image {
-    height: 250px;
+    height: 200px;
     border-radius: 10px;
     margin-bottom: 1rem;
 }

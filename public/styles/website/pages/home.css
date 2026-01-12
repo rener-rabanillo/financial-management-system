@@ -1,15 +1,32 @@
 /* Hero section */
 
 .hero {
-    position: relative;
     height: 35rem;
+}
+
+.hero__layout {
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.hero__text {
+    position: absolute;
+    top: 40%;
+    left: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 1rem;
-    padding: 5rem;
-    overflow: hidden;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px var(--color-dim-300);
+    backdrop-filter: blur(10px);
 }
 
 .hero__heading {
@@ -20,6 +37,7 @@
     text-align: left;
     text-transform: capitalize;
     text-wrap: balance;
+    color: var(--color-primary-900);
 }
 
 .hero__subheading {
@@ -37,11 +55,8 @@
 }
 
 .hero__image {
-    position: absolute;
-    bottom: -36rem;
-    right: -5rem;
+    width: 100%;
     z-index: -10;
-    height: 80rem;
 }
 
 
@@ -49,19 +64,16 @@
 /* Product description section */
 
 .prod-desc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 3rem 0;
+    background-color: var(--color-primary-500);
 }
 
-.prod-desc__container {
+.prod-desc__layout {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    width: 95%;
-    padding: 5rem;
-    border-radius: 20px;
+    padding: 0 2rem;
 }
 
 .prod-desc__image {
@@ -97,18 +109,22 @@
 /* Value proposition section */
 
 .value-prop {
+    padding: 5rem 0;
+}
+
+.value-prop__layout {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5rem 2rem;
+    gap: 2rem;
+    padding: 0 2rem;
 }
 
 .value-prop__heading {
     font-weight: 700;
     font-size: 1.5rem;
     text-align: center;
-    margin-bottom: 1rem;
 }
 
 .value-prop__list {
@@ -118,7 +134,6 @@
     flex-wrap: wrap;
     align-content: center;
     gap: 2rem;
-    margin: 1rem;
 }
 
 .value-prop__container {
@@ -135,7 +150,7 @@
 }
 
 .value-prop__image {
-    height: 22rem;
+    height: 100%;
     background-color: var(--color-secondary-500);
     transition: all 0.5s;
 }
@@ -151,15 +166,7 @@
 
 
 /* For small-sized monitors and laptops */
-@media screen and (min-width: 769px) and (max-width: 1080px) {
-    .hero__image {
-        position: absolute;
-        bottom: -20rem;
-        right: -5rem;
-        z-index: -10;
-        height: 60rem;
-    }
-
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     @media screen and (max-width: 945px) {
         .prod-desc__image {
             width: 18rem;
@@ -171,14 +178,6 @@
 
 /* For tablets */
 @media screen and (min-width: 426px) and (max-width: 768px) {
-    .hero__image {
-        position: absolute;
-        bottom: -15rem;
-        right: -5rem;
-        z-index: -10;
-        height: 55rem;
-    }
-
     .prod-desc__image {
         width: 20rem;
     }

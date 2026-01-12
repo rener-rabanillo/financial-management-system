@@ -1,8 +1,6 @@
 /* Buttons */
 
 .btn {
-    border: none;
-    background-color: transparent;
     cursor: pointer;
 }
 
@@ -40,8 +38,11 @@
 .btn-round-green {
     padding: 0.5rem;
     border-radius: 999px;
-    color: white;
     background-color: var(--color-accent-500);
+}
+
+.btn-round-green * {
+    color: white;
 }
 
 .btn-round-green:hover {
@@ -81,18 +82,23 @@
     padding: 0.2rem;
     box-shadow: 0 0 0 2px white inset;
     border-radius: 999px;
+}
+
+.btn-round-outline-white * {
     color: white;
 }
 
 .btn-round-outline-white:hover {
-    color: rgb(100, 100, 100);
     background-color: white;
 }
 
+.btn-round-outline-white:hover * {
+    color: var(--color-primary-500);
+}
+
 .btn-round-outline-white:active {
-    box-shadow: 0 0 0 2px rgb(200, 200, 200) inset;
-    color: rgb(100, 100, 100);
-    background-color: rgb(200, 200, 200);
+    box-shadow: 0 0 0 2px var(--color-gray-300) inset;
+    background-color: var(--color-gray-300);
 }
 
 
@@ -101,8 +107,11 @@
 .btn-smooth-edge-green {
     padding: 0.5rem;
     border-radius: 5px;
-    color: white;
     background-color: var(--color-accent-500);
+}
+
+.btn-smooth-edge-green * {
+    color: white;
 }
 
 .btn-smooth-edge-green:hover {
@@ -157,4 +166,15 @@
 
 .card-light-transparent {
     background-color: rgba(255, 255, 255, 0.35);
+}
+
+
+
+
+.truncate-text {
+    width: 75%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

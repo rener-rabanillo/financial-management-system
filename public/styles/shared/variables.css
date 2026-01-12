@@ -1,7 +1,8 @@
 :root {
     /* Brand color */
-    --color-primary-100: #557FA8;
-    --color-primary-300: #386796;
+    --color-primary-50: #e7f2ff;
+    --color-primary-100: #7397bb;
+    --color-primary-300: #4676a5;
     --color-primary-500: #245484;
     --color-primary-700: #153C63;
     --color-primary-900: #0B233A;
@@ -25,7 +26,15 @@
     --color-accent-700: #669c2d;
     --color-accent-900: #4b771c;
     
-    --color-gray--light: #EDEDED;
-    --color-gray--neutral: #757575;
+    --color-gray-50: #f6f6f6;
+    --color-gray-100: #e2e2e2;
+    --color-gray-300: #bbbbbb;
+    --color-gray-500: #898989;
+    --color-gray-700: #5f5f5f;
+    --color-gray-900: #383838;
+
+    --color-dim-100: #00000010;
+    --color-dim-300: #00000030;
+    --color-dim-500: #00000050;
     --color-dim: #00000080;
 }

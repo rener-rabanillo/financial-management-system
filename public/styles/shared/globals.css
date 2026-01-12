@@ -123,9 +123,11 @@
 * {
     font-family: "Inter", sans-serif;
     font-weight: 400;
+    font-size: 15px;
     line-height: 1.5;
     margin: 0;
     padding: 0;
+    color: var(--color-gray-900);
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -139,15 +141,31 @@ a {
     color: inherit;
 }
 
-input, button, textarea, select {
-    font: inherit;
-    font-size: inherit;
-    color: inherit;
-    outline: none;
+img {
+    display: block;
 }
 
-svg {
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    padding: none;
+    border: none;
+    outline: none;
+    margin: none;
+    color: inherit;
+    background-color: inherit;
+}
+
+button {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+select {
+    box-shadow: 0 0 0 1px var(--color-gray-900) inset;
+    border-radius: 3px;
+    cursor: pointer;
 }

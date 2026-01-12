@@ -1,78 +1,33 @@
+/* App layout */
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template: 80px calc(100vh - 80px) / 280px  calc(100vw - 280px);
+}
+
+
+
 /* App logo */
 
 .brand {
-    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 1rem;
-    pointer-events: none;
+    gap: 1rem;
+    user-select: none;
 }
 
 .brand__logo {
-    width: 50px;
-    margin-right: 0.5rem;
+    width: 35px;
 }
 
 .brand__name {
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
-    font-size: 1.2rem;
-    color: white;
-}
-
-
-
-/* Navigation and user menu */
-
-.nav-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 280px;
-    height: 100vh;
-    background-color: var(--color-primary-500);
-}
-
-.nav {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.nav__list {
-    width: 100%;
-    padding: 0 1rem;
-}
-
-.nav__link {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-}
-
-.nav__link:hover {
-    background-color: var(--color-primary-300);
-}
-
-.nav__link:focus {
-    background-color: var(--color-primary-100);
-}
-
-.nav__icon {
-    width: 20px;
-    margin-right: 1rem;
-    color: white;
-}
-
-.nav__text {
-    color: white;
+    font-size: 1.25rem;
+    color: var(--color-primary-500);
 }
 
 
@@ -80,19 +35,21 @@
 /* Header */
 
 .header {
-    height: 82px;
+    grid-area: 1 / 1 / span 1 / span 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: var(--color-gray-50);
+}
+
+.header__interactables {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    gap: 2rem;
-    padding: 2rem;
-    margin-left: 280px;
-}
-
-.header__heading {
-    font-weight: 700;
-    font-size: 1.5rem;
+    gap: 1.5rem;
 }
 
 .header__form {
@@ -100,17 +57,28 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0.25rem 1rem;
-    border-radius: 10px;
-    background-color: var(--color-gray--light);
+    padding: 0 1rem;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.header__search-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header__search {
-    width: 20rem;
+    width: 18rem;
+    padding: 0.75rem;
     box-shadow: none;
     border: none;
-    font-size: inherit;
-    background-color: inherit;
+    color: var(--color-gray-900);
+    background-color: transparent;
+}
+
+.header__search::placeholder {
+    color: var(--color-gray-900);
 }
 
 .header__search::-webkit-search-cancel-button {
@@ -120,65 +88,127 @@
 
 .header__search-icon {
     width: 20px;
-    color: var(--color-gray--neutral);
+    color: var(--color-gray-900);
+}
+
+.header__notif {
+    cursor: pointer;
 }
 
 .header__notif-icon {
+    width: 32px;
+    color: var(--color-gray-900);
+}
+
+.header__profile {
     width: 35px;
-    justify-self: flex-end;
+    border-radius: 999px;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
 }
 
 .header__profile-image {
-    width: 40px;
-    justify-self: flex-end;
-    border-radius: 999px;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+}
+
+
+
+/* Navigation and user menu */
+
+.nav {
+    grid-area: 2 / 1 / span 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3rem 1rem;
+    background-color: var(--color-gray-50);
+}
+
+.nav__list {
+    width: 100%;
+}
+
+.nav__link {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: var(--color-gray-900);
+}
+
+.nav__link:hover {
+    background-color: var(--color-dim-100);
+}
+
+.nav__link:active {
+    background-color: var(--color-dim-300);
+}
+
+.nav__icon {
+    width: 20px;
+    color: inherit;
+}
+
+.nav__text {
+    color: inherit;
 }
 
 
 
 /* Main */
 
-main {
-    margin-left: 280px;
+.main {
+    grid-area: 2 / 2 / span 1 / span 1;
+    background-color: var(--color-gray-50);
+}
+
+.main__container {
+    height: 100%;
+    padding: 0 5rem 3rem;
+    box-shadow: 0 0 10px var(--color-gray-100);
+    border-radius: 10px 0 0 0;
+    background-color: white;
+}
+
+.main__header {
+    padding: 3rem 0 1.5rem 0;
+    background-color: white;
+}
+
+.main__heading {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-primary-500);
 }
 
 
+
+/* Add button */
+
+.add-button-container {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
 
 .add-button {
     width: 50px;
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
 }
 
-
-
-/* Input */
-
-input, select {
+.tool-tip {
     font-size: 0.9rem;
-    padding: 0.5rem;
-    box-shadow: 0 0 0 1px black inset;
-    border: none;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
-    color: black;
-}
-
-select, ::picker(select) {
-    appearance: base-select;
-}
-
-optgroup {
-    font-weight: 700;
-    padding: 5px;
-}
-
-option {
-    font-size: 0.9rem;
-}
-
-label {
-    font-weight: 700;
-    font-size: 0.75rem;
-    color: black;
+    color: white;
+    background-color: black;
 }
