@@ -6,9 +6,7 @@ import "dotenv/config";
 import pageNavigationRouter from "./src/routes/page.navigation.routes.js";
 import loginRouter from "./src/routes/login.routes.js";
 import signupRouter from "./src/routes/signup.routes.js";
-import budgetRouter from "./src/routes/budget.routes.js";
-import transactionsRouter from "./src/routes/transactions.routes.js";
-import accountsRouter from "./src/routes/accounts.routes.js";
+import apiRouter from "./src/routes/api.routes.js";
 
 const app = express();
 const HOST = process.env.HOST;
@@ -25,9 +23,7 @@ app.use(cookieParser());
 app.use(pageNavigationRouter);
 app.use("/login", loginRouter);
 app.use("/signup", signupRouter);
-app.use("/budgets", budgetRouter);
-app.use("/transactions", transactionsRouter);
-app.use("/accounts", accountsRouter);
+app.use("/api", apiRouter);
 
 // Fallback
 app.use((req, res) => {
