@@ -9,7 +9,8 @@ CREATE TABLE `user` (
     `password_hash` CHAR(60) NOT NULL,
     `profile_picture_path` TEXT DEFAULT NULL,
     `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    `is_deleted` BOOLEAN NOT NULL DEFAULT FALSE,
+    `is_active` BOOLEAN NOT NULL DEFAULT TRUE,
+
     CONSTRAINT `uq_email` UNIQUE (`email`),
     INDEX (`email`)
 );
@@ -18,6 +19,7 @@ CREATE TABLE `category_group` (
     `id` BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     `name` VARCHAR(50) NOT NULL,
     `type` ENUM("income", "expense") NOT NULL,
+    `is_remove` BOOLEAN NOT NULL DEFAULT FALSE,
     `user_id` BINARY(16) NOT NULL,
     CONSTRAINT `fk_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
     INDEX (`user_id`)
@@ -43,6 +45,7 @@ CREATE TABLE `income_record` (
 CREATE TABLE `expense_record` (
     `id` BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     `amount_allocated` DECIMAL(10, 2) NOT NULL DEFAULT 0,
+    `amount_spent` DECIMAL(10, 2) NOT NULL DEFAULT 0,
     `year_month` DATE NOT NULL,
     `category_id` BIGINT UNSIGNED NOT NULL,
     CONSTRAINT `fk_category` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`),
@@ -55,9 +58,12 @@ CREATE TABLE `goal` (
     `type` ENUM("accumulation", "reduction") NOT NULL,
     `status` ENUM("active", "closed") NOT NULL DEFAULT "active",
     `amount_set` DECIMAL(10, 2) NOT NULL,
+    `amount_placed` DECIMAL(10, 2) NOT NULL,
     `date_due` DATE NOT NULL,
     `date_accomplished` DATE DEFAULT NULL,
     `user_id` BINARY(16) NOT NULL,
+    `is_active` BOOLEAN NOT NULL DEFAULT TRUE,
+    `is_remove` BOOLEAN NOT NULL DEFAULT FALSE,
     CONSTRAINT `fk_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
     INDEX (`user_id`)
 );
@@ -67,6 +73,7 @@ CREATE TABLE `account` (
     `name` VARCHAR(50) NOT NULL,
     `type` ENUM("asset", "liability") NOT NULL,
     `balance` DECIMAL(10, 2) NOT NULL,
+    `is_remove` BOOLEAN NOT NULL DEFAULT FALSE,
     `user_id` BINARY(16) NOT NULL,
     CONSTRAINT `fk_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
     INDEX (`user_id`)
@@ -79,8 +86,9 @@ CREATE TABLE `transaction` (
     `destination_account` BIGINT UNSIGNED,
     `amount` DECIMAL(10, 2) NOT NULL,
     `notes` TEXT,
+    `is_remove` BOOLEAN NOT NULL DEFAULT FALSE,
     `user_id` BINARY(16) NOT NULL,
-    CONSTRAINT `fk_source_account` FOREIGN KEY (`source_account`) REFERENCES `account` (`id`) ON DELETE SET NULL,
+    CONSTRAINT `fk_source_account` FOREIGN KEY (`source_account`) REFERENCES `account` (`id`) ON DELETE CASCAD SET NULL,
     CONSTRAINT `fk_destination_account` FOREIGN KEY (`destination_account`) REFERENCES `account` (`id`) ON DELETE SET NULL,
     CONSTRAINT `fk_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE,
     INDEX (`source_account`, `destination_account`, `user_id`)
