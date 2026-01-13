@@ -1,30 +1,98 @@
-.goals__table {
-    width: 100%;
-    border-collapse: collapse;
+
+.goal-card, .goal-card * {
+    box-sizing: border-box; 
+}
+
+.goals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     font-family: Arial, sans-serif;
+    padding: 0px;
+    max-width: 600px;
+}
+
+.goal-card {
+    border: 2px solid #000;
+    padding: 15px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}   
+
+
+.goal-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.goal-card__details {
+    display: flex;
+    flex-direction: column;
+}
+
+.goal-card__title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+}
+
+.goal-card__type {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+}
+
+.goal-card__meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.goal-card__amount {
+    font-weight: bold;
     font-size: 14px;
 }
 
-.goals__table th {
-    background-color: #1F4E79; /* dark blue header */
-    color: #fff;
-    padding: 10px;
-    text-align: left;
+.goal-card__menu-icon {
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 0.5;
 }
 
-.goals__table td {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-}
-
-.goals__table tbody tr:nth-child(even) {
-    background-color: #f2f2f2; /* alternating row color */
-}
-
-.goals__table tbody tr:nth-child(odd) {
+.goal-card__progress-container {
+    width: 100%;
+    height: 20px; 
+    border: 2px solid #000;
     background-color: #fff;
+    padding: 2px; 
+    display: block; 
 }
 
-.goals__table th, .goals__table td {
-    white-space: nowrap;
+.goal-card__progress-bar {
+    height: 100%; 
+    background-color: #2196F3;
+    display: block;
+    transition: width 1s ease-in-out; 
+}
+
+.goal-card__type--savings {
+    color: #2e7d32; 
+    font-weight: bold;
+}
+
+.goal-card__type--debt {
+    color: #d32f2f; 
+    font-weight: bold;
+}
+
+.goal-card__progress-bar--savings {
+    background-color: #2196F3; 
+}
+
+.goal-card__progress-bar--debt {
+    background-color: #f44336; 
 }
