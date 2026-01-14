@@ -1,6 +1,6 @@
 @import url(/styles/shared/variables.css);
 @import url(/styles/shared/globals.css);
-@import url(/styles/website/utils.css);
+@import url(/styles/shared/utils.css);
 @import url(/styles/website/globals.css);
 @import url(/styles/website/pages/home.css);
 @import url(/styles/website/pages/about.css);

@@ -1,0 +1,401 @@
+/* Buttons */
+
+.btn {
+    padding: 0.75rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-default:hover {
+    background-color: var(--color-dim-100);
+}
+
+.btn-default:active {
+    background-color: var(--color-dim-300);
+}
+
+/* Primary */
+
+.btn-primary {
+    color: white;
+    background-color: var(--color-primary-500);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-700);
+}
+
+.btn-primary:active {
+    background-color: var(--color-primary-900);
+}
+
+/* Gradient */
+
+.btn-primary-gradient {
+    position: relative;
+    z-index: 1;
+    color: white;
+    overflow: hidden;
+}
+
+.btn-primary-gradient::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 200%;
+    height: 100%;
+    background-image: linear-gradient(
+        to right,
+        var(--color-primary-500),
+        var(--color-secondary-500),
+        var(--color-primary-500)
+    );
+    transform: translateX(-50%);
+    transition: all 0.5s;
+}
+
+.btn-primary-gradient:hover::before {
+    transform: translateX(0);
+}
+
+/* Outline in Primary Color */
+
+.btn-primary-outline {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 0 2px var(--color-primary-500) inset;
+    color: var(--color-primary-500);
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.btn-primary-outline::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: var(--color-primary-500);
+    transform: translateX(-100%);
+    transition: all 0.5s;
+}
+
+.btn-primary-outline:hover {
+    color: white;
+}
+
+.btn-primary-outline:hover::before {
+    transform: translateX(0);
+}
+
+/* Secondary outline button */
+
+.btn-secondary-outline {
+    position: relative;
+    color: var(--color-secondary-500);
+    box-shadow: 0 0 0 2px var(--color-secondary-500) inset;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.btn-secondary-outline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-secondary-500);
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+}
+
+.btn-secondary-outline:hover {
+    color: white;
+}
+
+.btn-secondary-outline:hover::before {
+    transform: translateX(0);
+}
+
+
+
+/* Cards */
+
+.card--primary {
+    border-radius: 10px;
+    background-color: var(--color-primary-500);
+}
+
+.card--secondary {
+    border-radius: 10px;
+    background-color: var(--color-secondary-500);
+}
+
+.card--shadow {
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* Forms */
+
+.form__wrapper--floating-label {
+    position: relative;
+}
+
+.form__text-box--floating-label {
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.form__label--floating-label {
+    position: absolute;
+    top: 0.75rem;
+    left: 1rem;
+    z-index: 10;
+    pointer-events: none;
+    transition: padding 0.5s ease, transform 0.5s ease;
+}
+
+.form__wrapper--floating-label :is(
+    .form__text-box--floating-label:focus,
+    .form__text-box--floating-label:not(:placeholder-shown)
+) ~ .form__label--floating-label {
+    padding: 0 0.5rem;
+    transform: translate(-0.6rem, -100%) scale(0.8);
+}
+
+
+
+
+.radio-button {
+    width: 100%;
+    position: relative;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 0 0 2px var(--color-primary-500) inset;
+    border-radius: 5px;
+}
+
+.radio-button::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    border: 3px solid var(--color-primary-500);
+    border-radius: 999px;
+    background-color: white;
+    pointer-events: none;
+}
+
+.radio-button > input[type="radio"] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+
+.radio-button > label {
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+    color: var(--color-primary-500);
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.radio-button:has(input[type="radio"]:checked) {
+    background-color: var(--color-primary-500);
+}
+
+.radio-button:has(input[type="radio"]:checked)::after {
+    border: 3px solid white;
+    background-color: var(--color-primary-500);
+}
+
+.radio-button:has(input[type="radio"]:checked) > label {
+    color: white;
+}
+
+
+
+
+.radio-button--no-icon {
+    width: 100%;
+    position: relative;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 0 0 2px var(--color-primary-500) inset;
+    border-radius: 5px;
+}
+
+.radio-button--no-icon > input[type="radio"] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+
+.radio-button--no-icon > label {
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: var(--color-primary-500);
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.radio-button--no-icon:has(input[type="radio"]:checked) {
+    background-color: var(--color-primary-500);
+}
+
+.radio-button--no-icon:has(input[type="radio"]:checked) > label {
+    color: white;
+}
+
+
+
+/* Gray round outline button */
+
+.btn-round-outline-gray {
+    font-size: 0.75rem;
+    padding: 0.25rem;
+    box-shadow: 0 0 0 2px rgb(100, 100, 100) inset;
+    border-radius: 999px;
+    color: rgb(100, 100, 100);
+}
+
+.btn-round-outline-gray:hover {
+    color: white;
+    background-color: rgb(100, 100, 100);
+}
+
+.btn-round-outline-gray:active {
+    box-shadow: 0 0 0 2px rgb(70, 70, 70) inset;
+    color: white;
+    background-color: rgb(70, 70, 70);
+}
+
+
+/* White round outline button */
+
+.btn-round-outline-white {
+    padding: 0.2rem;
+    box-shadow: 0 0 0 2px white inset;
+    border-radius: 999px;
+}
+
+.btn-round-outline-white * {
+    color: white;
+}
+
+.btn-round-outline-white:hover {
+    background-color: white;
+}
+
+.btn-round-outline-white:hover * {
+    color: var(--color-primary-500);
+}
+
+.btn-round-outline-white:active {
+    box-shadow: 0 0 0 2px var(--color-gray-300) inset;
+    background-color: var(--color-gray-300);
+}
+
+
+/* Green smooth edge button */
+
+.btn-smooth-edge-green {
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: var(--color-accent-500);
+}
+
+.btn-smooth-edge-green * {
+    color: white;
+}
+
+.btn-smooth-edge-green:hover {
+    background-color: var(--color-accent-700);
+}
+
+.btn-smooth-edge-green:active {
+    background-color: var(--color-accent-900);
+}
+
+
+/* Red smooth edge button */
+
+.btn-smooth-edge-red {
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: rgb(190, 68, 68);
+}
+
+.btn-smooth-edge-red * {
+    color: white;
+}
+
+.btn-smooth-edge-red:hover {
+    background-color: rgb(166, 38, 38);
+}
+
+.btn-smooth-edge-red:active {
+    background-color: rgb(117, 17, 17);
+}
+
+
+
+/* Cards */
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.card-white {
+    background-color: white;
+}
+
+.card-yellow {
+    background-color: var(--color-tertiary-100);
+}
+
+.card-white-shadow {
+    box-shadow: 0 0 10px 2px rgb(230, 230, 230);
+    background-color: white;
+}
+
+.card-light-transparent {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+
+
+
+
+/* Hidden */
+
+.hidden {
+    display: none;
+}

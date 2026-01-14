@@ -191,7 +191,7 @@ body {
 
 /* Add button */
 
-.add-button-container {
+.fab-container {
     position: fixed;
     bottom: 2rem;
     left: 2rem;
@@ -201,8 +201,25 @@ body {
     gap: 1rem;
 }
 
-.add-button {
+.fab {
     width: 50px;
+    padding: 0.5rem;
+    border-radius: 999px;
+    color: white;
+    background-color: var(--color-accent-500);
+    cursor: pointer;
+}
+
+.fab:hover {
+    background-color: var(--color-accent-700);
+}
+
+.fab:active {
+    background-color: var(--color-accent-900);
+}
+
+.fab-icon * {
+    color: white;
 }
 
 .tool-tip {

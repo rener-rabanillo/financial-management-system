@@ -158,6 +158,11 @@ select {
     background-color: inherit;
 }
 
+input[type="radio"] {
+    appearance: none;
+    cursor: pointer;
+}
+
 button {
     display: flex;
     justify-content: center;
@@ -166,6 +171,6 @@ button {
 
 select {
     box-shadow: 0 0 0 1px var(--color-gray-900) inset;
-    border-radius: 3px;
+    border-radius: 5px;
     cursor: pointer;
 }

@@ -1,171 +1,362 @@
-/* Main content */
+/* Main Content */
+
+.budgets__container {
+    width: 100%;
+    height: calc(100% - 6.75rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+
+
+/* Category Types */
+
+.budgets__category-types {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.budgets__category-type {
+    width: 10rem;
+    height: 2.5rem;
+}
+
+
+
+/* Table */
 
 .budgets__table-container {
-    border-radius: 10px;
+    width: 100%;
+    height: 100%;
     border: 2px solid var(--color-primary-900);
+    border-radius: 5px;
     background-color: white;
     overflow: hidden;
 }
 
 .budgets__table {
     width: 100%;
-    border-collapse: collapse;
+    height: 100%;
+    overflow: auto;
 }
 
-.budgets__table-header-row {
+.budgets__table::-webkit-scrollbar {
+    width: 10px;
+}
+
+.budgets__table::-webkit-scrollbar-track {
+    border-radius: 999px;
+    background: white;
+}
+
+.budgets__table::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    border: 3px solid white;
+    background: var(--color-gray-300);
+}
+
+.budgets__table::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gray-500);
+}
+
+.budgets__table::-webkit-scrollbar-thumb:active {
+    background: var(--color-gray-700);
+}
+
+
+
+/* Table Header */
+
+.budgets__table-header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    padding: 1rem;
     background-color: var(--color-primary-900);
+}
+
+.budgets__table-header-row--income,
+.budgets__table-body-row--income {
+    display: grid;
+    grid-template: auto / 18% 72% 10%;
+}
+
+.budgets__table-header-row--expense,
+.budgets__table-body-row--expense {
+    display: grid;
+    grid-template: auto / 18% 18% 18% 18% 18% 10%;
 }
 
 .budgets__table-header-label {
     font-weight: 700;
     font-size: 0.9rem;
-    text-align: left;
     text-transform: uppercase;
-    padding: 1rem;
     color: white;
 }
 
-.budgets__category-group-row {
+
+
+/* Table Body Header */
+
+.budgets__table-body-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
     background-color: var(--color-primary-500);
 }
 
-.budgets__category-group-content {
+.budgets__table-body-header-wrapper {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
-    padding: 0.75rem 1rem;
 }
 
-.budgets__category-group-text {
+.budgets__table-body-header-label {
     font-weight: 700;
     color: white;
 }
 
-.budgets__add-category-button {
+.budgets__table-body-header-add-button {
     width: 1.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.budgets__add-category-icon {
+.budgets__table-body-header-add-icon {
     width: 100%;
 }
 
-.budgets__category-row:nth-child(odd) {
-    background-color: white;
-}
-
-.budgets__category-row:nth-child(even) {
-    background-color: var(--color-gray-100);
-}
-
-.budgets__category-data {
-    padding: 0 1rem;
-}
-
-.budgets__category-content {
-    color: var(--color-gray-900);
-}
-
-.budgets__set-budget-container {
-    padding: 0.5rem;
-}
-
-.budgets__options-container {
-    padding: 0.5rem;
-}
-
-.budgets__set-budget-button {
-    font-weight: 700;
-    font-size: 0.75rem;
-    padding: 0.25rem 1rem;
-    margin: 0 auto;
-}
-
-.budgets__options-button {
+.budgets__table-body-header-options-button {
     padding: 5px;
     border-radius: 999px;
-    margin-left: auto;
     cursor: pointer;
 }
 
-.budgets__options-button:hover {
-    background-color: var(--color-dim-100);
-}
-
-.budgets__options-button:active {
+.budgets__table-body-header-options-button:hover {
     background-color: var(--color-dim-300);
 }
 
-.budgets__options-icon {
+.budgets__table-body-header-options-button:active {
+    background-color: var(--color-dim-500);
+}
+
+.budgets__table-body-header-options-icon {
+    width: 20px;
+}
+
+.budgets__table-body-header-options-icon * {
+    color: white;
+}
+
+
+
+/* Table Body Row */
+
+.budgets__table-body-row--income:nth-child(odd),
+.budgets__table-body-row--expense:nth-child(odd) {
+    background-color: white;
+}
+
+.budgets__table-body-row--income:nth-child(even),
+.budgets__table-body-row--expense:nth-child(even) {
+    background-color: var(--color-gray-100);
+}
+
+.budgets__table-body-row--income,
+.budgets__table-body-row--expense {
+    padding: 0.5rem 1rem;
+}
+
+.budgets__table-body-row-data {
+    font-size: 0.9rem;
+    align-self: center;
+}
+
+.budgets__trackbar-container {
+    width: 95%;
+    height: 10px;
+    position: relative;
+    box-shadow: 0 0 0 1px var(--color-primary-500) inset;
+    border-radius: 999px;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+.budgets__trackbar {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-primary-500);
+}
+
+.budgets__table-body-row-options {
+    justify-self: flex-end;
+    align-self: center;
+    padding: 5px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.budgets__table-body-row-options:hover {
+    background-color: var(--color-dim-100);
+}
+
+.budgets__table-body-row-options:active {
+    background-color: var(--color-dim-300);
+}
+
+.budgets__table-body-row-options-icon {
     width: 20px;
 }
 
 
 
-/* Add category group form */
+/* New Category Group Form Modal */
 
-#addCategoryGroupForm, #addCategoryForm, #setBudgetForm {
+.new-category-group-form-modal,
+.new-income-category-form-modal,
+.new-expense-category-form-modal {
+    width: 100%;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
+    z-index: 10;
+    background-color: var(--color-dim-700);
     display: none;
+    opacity: 0;
+    transition: opacity 0.2s, display 0.2s allow-discrete;
 }
 
-#addCategoryGroupForm .background, #addCategoryForm .background, #setBudgetForm .background {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.new-category-group-form-modal-show,
+.new-income-category-form-modal-show,
+.new-expense-category-form-modal-show {
+    display: block;
+    opacity: 1;
+
+    @starting-style {
+        opacity: 0;
+    }
+}
+
+.new-category-group-form-modal__container,
+.new-income-category-form-modal__container,
+.new-expense-category-form-modal__container {
+    width: 32rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
     padding: 3rem;
-    background-color: var(--color-dim);
+    border-radius: 10px;
+    background-color: white;
+    transform: translate(-50%, -50%);
 }
 
-#addCategoryGroupForm .container, #addCategoryForm .container, #setBudgetForm .container {
+.new-category-group-form-modal__wrapper,
+.new-income-category-form-modal__wrapper,
+.new-expense-category-form-modal__wrapper {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 3rem;
-    color: black;
+    gap: 2rem;
 }
 
-#addCategoryGroupForm h1, #addCategoryForm h1, #setBudgetForm h1 {
+.new-category-group-form-modal__heading,
+.new-income-category-form-modal__heading,
+.new-expense-category-form-modal__heading {
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
-    margin-bottom: 0.75rem;
 }
 
-#addCategoryGroupForm .grid, #addCategoryForm .grid, #setBudgetForm .grid {
+.new-category-group-form-modal__form,
+.new-income-category-form-modal__form,
+.new-expense-category-form-modal__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.new-category-group-form-modal__fields {
+    width: 100%;
     display: grid;
-    grid-template:
-        1fr 50px /
-        36px 36px 36px 36px 36px 36px
-    ;
+    grid-template: auto auto / auto auto;
     gap: 1rem;
 }
 
-#addCategoryGroupForm .grid > #group-name, #addCategoryForm .grid > #category, #setBudgetForm .grid > #amount {
-    grid-area: 1 / 1 / span 1 / span 6;
-}
-
-#addCategoryGroupForm .grid > #addButton, #addCategoryForm .grid > #addBtn, #setBudgetForm .grid > #setButton {
-    grid-area: 2 / 1 / span 1 / span 3;
-}
-
-#addCategoryGroupForm .grid > #cancelButton, #addCategoryForm .grid > #cancelBtn, #setBudgetForm .grid > #cancel {
-    grid-area: 2 / 4 / span 1 / span 3;
-}
-
-#addCategoryGroupForm .grid > *, #addCategoryGroupForm .grid > * > *,
-#addCategoryForm .grid > *, #addCategoryForm .grid > * > *,
-#setBudgetForm .grid > *, #setBudgetForm .grid > * > * {
+.new-expense-category-form-modal__fields {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.new-category-group-form-modal__text-box {
+    grid-area: 1 / 1 / span 1 / span 2;
+}
+
+.new-category-group-form-modal__text-box,
+.new-income-category-form-modal__text-box,
+.new-expense-category-form-modal__text-box,
+.new-expense-category-form-modal__number {
+    width: 100%;
+    height: 3rem;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 0 0 1px var(--color-gray-900) inset;
+    border-radius: 5px;
+}
+
+.new-category-group-form-modal__text-box:focus,
+.new-income-category-form-modal__text-box:focus,
+.new-expense-category-form-modal__text-box:focus,
+.new-expense-category-form-modal__number:focus {
+    box-shadow: 0 0 0 2px var(--color-gray-900) inset;
+}
+
+.new-category-group-form-modal__option-income {
+    grid-area: 2 / 1 / span 1 / span 1;
+    height: 3rem;
+}
+
+.new-category-group-form-modal__option-expense {
+    grid-area: 2 / 2 / span 1 / span 1;
+    height: 3rem;
+}
+
+.new-category-group-form-modal__buttons,
+.new-income-category-form-modal__buttons,
+.new-expense-category-form-modal__buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.new-category-group-form-modal__button,
+.new-income-category-form-modal__button,
+.new-expense-category-form-modal__button {
+    font-weight: 700;
+    border-radius: 999px;
 }

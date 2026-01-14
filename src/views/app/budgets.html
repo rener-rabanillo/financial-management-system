@@ -91,114 +91,81 @@
             <div class="main__header">
                 <h1 class="main__heading">Budgets</h1>
             </div>
-            <div class="budgets__table-container" id="budgets"></div>
+            <div class="budgets__container" id="budgets">
+            </div>
         </div>
     </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="add-button-container" id="add-category-group-container">
-        <button class="add-button btn btn-round-green" id="add-category-group">
-            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+    <div class="fab-container" id="fab-add-category-group-container">
+        <button class="fab" id="fab-add-category-group">
+            <svg class="fab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                 <!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                 <path fill="currentColor" d="M352 128C352 110.3 337.7 96 320 96C302.3 96 288 110.3 288 128L288 288L128 288C110.3 288 96 302.3 96 320C96 337.7 110.3 352 128 352L288 352L288 512C288 529.7 302.3 544 320 544C337.7 544 352 529.7 352 512L352 352L512 352C529.7 352 544 337.7 544 320C544 302.3 529.7 288 512 288L352 288L352 128z"/>
             </svg>
         </button>
     </div>
 
-    <div id="addCategoryGroupForm">
-        <div class="background">
-            <div class="container card card-white">
-                <h1>New Category Group</h1>
-                <form action="" method="POST">
-                    <div class="grid">
-                        <div id="group-name">
-                            <label for="group-name-input">Group name</label>
-                            <input type="text" id="group-name-input" required>
+    <div class="new-category-group-form-modal" id="new-category-group-form-modal">
+        <div class="new-category-group-form-modal__container">
+            <div class="new-category-group-form-modal__wrapper">
+                <h1 class="new-category-group-form-modal__heading">New Category Group</h1>
+                <form class="new-category-group-form-modal__form" id="new-category-group-form" method="POST" action="/budgets/group">
+                    <div class="new-category-group-form-modal__fields">
+                        <input class="new-category-group-form-modal__text-box" id="category-group-name" name="category_group_name" type="text" placeholder="Name" maxlength="50" required>
+                        <div class="new-category-group-form-modal__option-income radio-button">
+                            <input class="new-category-group-form-modal__radio" id="category-group-type-income" name="category_group_type" value="income" type="radio" checked required>
+                            <label class="new-category-group-form-modal__radio-label" for="category-group-type-income">Income</label>
                         </div>
-                        <button type="submit" id="addButton" class="btn btn-smooth-edge-green">
-                            <span class="btn-text">Add</span>
-                        </button>
-                        <button type="button" id="cancelButton" class="btn btn-smooth-edge-red">
-                            <span class="btn-text">Cancel</span>
-                        </button>
+                        <div class="new-category-group-form-modal__option-expense radio-button">
+                            <input class="new-category-group-form-modal__radio" id="category-group-type-expense" name="category_group_type" value="expense" type="radio" required>
+                            <label class="new-category-group-form-modal__radio-label" for="category-group-type-expense">Expense</label>
+                        </div>
+                    </div>
+                    <div class="new-category-group-form-modal__buttons">
+                        <button class="new-category-group-form-modal__button btn btn-default" id="new-category-group-form-cancel" type="button">Cancel</button>
+                        <button class="new-category-group-form-modal__button btn btn-default" id="new-category-group-form-submit" type="submit">Add</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
-    <div id="addCategoryForm">
-        <div class="background">
-            <div class="container card card-white">
-                <h1>New Category</h1>
-                <form action="" method="POST">
-                    <div class="grid">
-                        <div id="category">
-                            <label for="category-input">Category</label>
-                            <input type="text" id="category-input" required>
-                        </div>
-                        <button type="submit" id="addBtn" class="btn btn-smooth-edge-green">
-                            <span class="btn-text">Add</span>
-                        </button>
-                        <button type="button" id="cancelBtn" class="btn btn-smooth-edge-red">
-                            <span class="btn-text">Cancel</span>
-                        </button>
+    <div class="new-income-category-form-modal" id="new-income-category-form-modal">
+        <div class="new-income-category-form-modal__container">
+            <div class="new-income-category-form-modal__wrapper">
+                <h1 class="new-income-category-form-modal__heading">New Income Category</h1>
+                <form class="new-income-category-form-modal__form" id="new-income-category-form" method="POST" action="/budgets/category">
+                    <input class="new-income-category-form-modal__text-box" id="income-category-name" name="income_category_name" type="text" placeholder="Name" maxlength="50" required>
+                    <div class="new-income-category-form-modal__buttons">
+                        <button class="new-income-category-form-modal__button btn btn-default" id="new-income-category-form-cancel" type="button">Cancel</button>
+                        <button class="new-income-category-form-modal__button btn btn-default" id="new-income-category-form-submit" type="submit">Add</button>
                     </div>
-                </form> 
+                </form>
             </div>
         </div>
     </div>
 
-        <div id="setBudgetForm">
-            <div class="background">
-                <div class="container card card-white">
-                    <h1>Set Budget</h1>
-                    <form action="" method="POST">
-                        <div class="grid">
-                            <div id="amount">
-                                <label for="amount-input">Amount</label>
-                                <input type="number" id="amount-input" required>
-                            </div>
-                            <button type="submit" id="setButton" class="btn btn-smooth-edge-green">
-                                <span class="btn-text">Set</span>
-                            </button>
-                            <button type="button" id="cancel" class="btn btn-smooth-edge-red">
-                                <span class="btn-text">Cancel</span>
-                            </button>
-                        </div>
-                    </form> 
-                </div>
+    <div class="new-expense-category-form-modal" id="new-expense-category-form-modal">
+        <div class="new-expense-category-form-modal__container">
+            <div class="new-expense-category-form-modal__wrapper">
+                <h1 class="new-expense-category-form-modal__heading">New Expense Category</h1>
+                <form class="new-expense-category-form-modal__form" id="new-expense-category-form" method="POST" action="/budgets/category">
+                    <div class="new-expense-category-form-modal__fields">
+                        <input class="new-expense-category-form-modal__text-box" id="expense-category-name" name="expense_category_name" type="text" placeholder="Name" maxlength="50" required>
+                        <input class="new-expense-category-form-modal__number" id="expense-category-allocated" name="expense_category_allocated" type="number" placeholder="Allocated amount" min="0" required>
+                    </div>
+                    <div class="new-expense-category-form-modal__buttons">
+                        <button class="new-expense-category-form-modal__button btn btn-default" id="new-expense-category-form-cancel" type="button">Cancel</button>
+                        <button class="new-expense-category-form-modal__button btn btn-default" id="new-expense-category-form-submit" type="submit">Add</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </main>
+    </div>
 
-    <script src="/scripts/app/auth.js"></script>
-    <script src="/scripts/app/budget.js"></script>
+    <script src="/scripts/app/auth.js" type="module"></script>
     <script src="/scripts/app/budgets.js" type="module"></script>
+    <script src="/scripts/app/modals.js" type="module"></script>
     <script src="/scripts/app/tooltip.js" type="module"></script>
 
 </body>
