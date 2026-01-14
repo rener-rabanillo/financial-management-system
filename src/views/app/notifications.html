@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Buddy</title>
+  <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+  <link rel="stylesheet" href="/styles/app/main.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="brand">
+      <img class="brand__logo" src="/images/budget-buddy-logo.png" alt="Budget Buddy Logo">
+      <span class="brand__name">Budget Buddy</span>
+    </div>
+    <div class="header__interactables">
+      <form class="header__form" id="search-form" method="GET" action="/search">
+        <label class="header__search-label" for="search">
+          <svg class="header__search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+            <path fill="currentColor" d="M480 272C480 317.9 ..."></path>
+          </svg>
+        </label>
+        <input class="header__search" id="search" name="query" type="search" placeholder="Search">
+      </form>
+      <button class="header__notif" id="notification">🔔</button>
+      <button class="header__profile" id="profile">
+        <img class="header__profile-image" src="/images/default.png" alt="Profile">
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item"><a href="/" class="nav__link">Dashboard</a></li>
+      <li class="nav__item"><a href="/budgets" class="nav__link">Budgets</a></li>
+      <li class="nav__item"><a href="/transactions" class="nav__link">Transactions</a></li>
+      <li class="nav__item"><a href="/goals" class="nav__link">Goals</a></li>
+      <li class="nav__item"><a href="/accounts" class="nav__link">Accounts</a></li>
+    </ul>
+  </nav>
+
+  <main class="main">
+    <div class="main__container">
+      <div class="main__header">
+        <h1 class="main__heading" id="page-title">Page Title</h1>
+      </div>
+
+      <section id="notifications-main-content">
+
+      </section>
+
+      <div id="page-content">
+      
+      </div>
+
+    </div>
+  </main>
+
+  <script src="/scripts/app/notifications.js"></script>
+
+</body>
+</html>
